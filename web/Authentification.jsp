@@ -35,7 +35,7 @@
                             <h1 style="text-align: center"> GFI Authentification </h1>
                         </div>
                     </div>
-                    <form action="ControllerAuthent" method="post" name="login">
+                    <form action="ControlerAuthent" method="post" name="login">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Login</label>
                             <input type="text" name="login"  class="form-control" id="login" aria-describedby="emailHelp" placeholder="Enter Login" required>

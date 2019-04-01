@@ -17,7 +17,7 @@ public class ControlerSignUp extends HttpServlet {
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        UserDAO.create(new Utilisateur(login,password));
+        //UserDAO.create(new Utilisateur(login,password));
 
         resp.sendRedirect("Authentification.jsp");
     }

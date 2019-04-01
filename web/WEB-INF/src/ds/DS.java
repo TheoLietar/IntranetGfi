@@ -13,7 +13,7 @@ public class DS {
     InputStream input;
 
     public Connection getConnection() throws FileNotFoundException {
-        input = new FileInputStream("/home/theo/basegfi.properties");
+        input = new FileInputStream("/home/theo/apache-tomcat-9.0.14/bin/basegfi.properties");
 
         try{
             prop.load(input);
