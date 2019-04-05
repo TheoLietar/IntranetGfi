@@ -14,11 +14,16 @@ import java.io.IOException;
 public class ControlerSignUp extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String nom = req.getParameter("nom");
+        String prenom = req.getParameter("prenom");
         String login = req.getParameter("login");
         String password = req.getParameter("password");
 
-        //UserDAO.create(new Utilisateur(login,password));
+        System.out.println(nom);
+        System.out.println(prenom);
 
-        resp.sendRedirect("Authentification.jsp");
+        UserDAO.create(new Utilisateur(login,password,nom,prenom));
+
+        resp.sendRedirect("Accueil.jsp");
     }
 }

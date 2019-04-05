@@ -9,23 +9,126 @@
 <html>
 <head>
     <title>Authentification</title>
+    <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
-<%--<style>--%>
-    <%--.my-title {--%>
-        <%--text-align: center;--%>
-    <%--}--%>
-<%--</style>--%>
+<style>
 
-<header>
+    html{
+        height: 100%;
+    }
+    header{
+        box-sizing: border-box;
+        height: 150px;
+        /*min-height: 740px;*/
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    body{
+        background-color: whitesmoke;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
 
-</header>
+    footer{
+        position: absolute;
+        bottom: 0;
+    }
+    #mainfooter{
+        background-color: #31374a;
+        width: 100%;
+
+    }
+
+    #mainfooter::before{
+        background-color: #fd8224;
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+    }
+
+    #mainfooter .line:last-child{
+        background-color: #212635;
+    }
+
+    #mainfooter .line{
+        border-top: 1px solid rgba(255,255,255,0.1);
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .li{
+        color: #ffffff;
+        font-weight: 400;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-family: 'proximanova-extrabold';
+        font-size: 1.3rem;
+
+    }
+
+    .line .section li a {
+        color: #ffffff;
+        font-size: 0.8em;
+    }
+
+    ul{
+        list-style: none;
+        vertical-align: baseline;
+        /*text-space: 10;*/
+    }
+
+    body > div > div{
+        padding: 0;
+        margin: 0;
+    }
+
+    a:link{
+        color: inherit;
+    }
+
+
+
+
+
+</style>
 
 <body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="button animated bounce" src="gfi.png" alt="logo" width="130">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Infos.jsp">Informations pratiques</a>
+                    </li>
 
-<div class="container">
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container" align="middle">
     <div class="row">
         <div class="col-md-5 mx-auto">
             <div id="first">
@@ -47,9 +150,6 @@
                         <div class="col-md-12 text-center ">
                             <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Login</button>
                         </div>
-                        <div class="form-group">
-                            <p class="text-center">Vous n'avez pas de compte? <a href="SignUp.jsp" id="signup">Enregistrez-vous ici!</a></p>
-                        </div>
                     </form>
 
                 </div>
@@ -59,6 +159,24 @@
 </div>
 
 
+<footer id="mainfooter">
+    <div class="line">
 
+    </div>
+
+    <div class="line">
+        <div class="section">
+            <nav>
+                <ul>
+                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/home/mentions-legales">Mentions légales</a></li>
+                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/home/plan-du-site"> Plan du site</a></li>
+                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/contact">Contact</a> </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+</footer>
 </body>
 </html>

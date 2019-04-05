@@ -9,23 +9,23 @@ import java.util.Properties;
 
 public class DS {
 
-    final Properties prop = new Properties();
-    InputStream input;
+
 
     public Connection getConnection() throws FileNotFoundException {
-        input = new FileInputStream("/home/theo/apache-tomcat-9.0.14/bin/basegfi.properties");
+        //input = new FileInputStream("/home/theo/apache-tomcat-9.0.14/bin/basegfi.properties");
 
         try{
-            prop.load(input);
-            Class.forName(prop.getProperty("driver"));
-            String url = prop.getProperty("url");
-            String nom = prop.getProperty("nom");
-            String mdp = prop.getProperty("mdp");
-            input.close();
+
+            Class.forName("org.postgresql.Driver");
+            System.out.println("DRiver OK");
+
+            String url = "jdbc:postgresql://localhost:5432/GFIDB";
+            String user = "postgres";
+            String pwd = "300899";
 
 
 
-            return DriverManager.getConnection(url,nom,mdp);
+            return DriverManager.getConnection(url,user,pwd);
 
         }catch(Exception e){
             e.printStackTrace();
