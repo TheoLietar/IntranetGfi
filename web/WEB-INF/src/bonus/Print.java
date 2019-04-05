@@ -52,15 +52,25 @@ public class Print {
                 String tmp = d[i];
                 String res = tmp + "_";
 
+                if (d[i + 5].contains(".")) {
+                    d[i+3] = d[i+3].substring(1,d[i+3].length()-1) + d[i+4].substring(1,d[i+4].length()-1);
+                    d[i+4] = d[i+5].substring(1,d[i+5].length()-1);
+                    d[i+6] = d[i+7].substring(1,d[i+7].length()-1).toLowerCase();
+                }else{
+                    d[i+3] = d[i+3].substring(1,d[i+3].length()-1);
+                    d[i+4] = d[i+4].substring(1,d[i+4].length()-1);
+                    d[i+6] = d[i+6].substring(1,d[i+6].length()-1).toLowerCase();
+
+                }
+
                 //Source
                 String addr_src = d[i+3];
-                d[i+3] = d[i+3].substring(1,d[i+3].length()-1);
+
 
                 //Destination
-                d[i+4] = d[i+4].substring(1,d[i+4].length()-1);
+
 
                 //Permission
-                d[i+6] = d[i+6].substring(1,d[i+6].length()-1).toLowerCase();
 
                 this.writer.append("configure set logical-systems GFI_XX security policies from-zone " + d[i] + " to-zone XXXX policy " + res + " match source-adress " + d[i+3] + "\r\n");
                 this.writer.append("configure set logical-systems GFI_XX security policies from-zone "+d[i]+" to-zone XXXX policy " + res + " match destination-address " + d[i+4] + "\r\n");

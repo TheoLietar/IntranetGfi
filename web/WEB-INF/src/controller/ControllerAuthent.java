@@ -19,12 +19,12 @@ public class ControllerAuthent extends HttpServlet {
         String password = req.getParameter("password");
 
         System.out.println(password);
-        System.out.println(UserDAO.findByLogin(login).getPassword());
 
         System.out.println(UserDAO.findByLogin(login));
 
 
         if(UserDAO.findByLogin(login) != null){
+            System.out.println("je suis rentré");
             if(UserDAO.findByLogin(login).getPassword().equals(password)){
                 HttpSession session = req.getSession(true);
                 session.setAttribute("login",login);

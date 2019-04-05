@@ -27,31 +27,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
-<script type="text/javascript">
-    $(document).ready(function(){
-        // Activate tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-
-        // Select/Deselect checkboxes
-        var checkbox = $('table tbody input[type="checkbox"]');
-        $("#selectAll").click(function(){
-            if(this.checked){
-                checkbox.each(function(){
-                    this.checked = true;
-                });
-            } else{
-                checkbox.each(function(){
-                    this.checked = false;
-                });
-            }
-        });
-        checkbox.click(function(){
-            if(!this.checked){
-                $("#selectAll").prop("checked", false);
-            }
-        });
-    });
-</script>
 <style>
 
     html{
@@ -330,15 +305,13 @@
         background-position: 100% 100%;
         background-repeat: no-repeat;
     }
-
 </style>
-
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img class="button animated bounce" src="gfi.png" alt="logo" width="130">
+            <a class="navbar-brand" href="Accueil.jsp">
+                <img  class="button animated bounce" src="gfi.png" alt="logo" width="130">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -350,13 +323,6 @@
                     <a href="Accueil.jsp" class="btn">Vue normale</a>
                 </p>
             </div>
-
-            <%--        <div id="searchbar">--%>
-            <%--            <form action="" class="formulaire">--%>
-            <%--                <input class="champ" type="text" placeholder="Search..."/>--%>
-            <%--                <input class="bouton" type="submit" value=" "/>--%>
-            <%--            </form>--%>
-            <%--        </div>--%>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -392,6 +358,17 @@
         </div>
     </div>
 
+<%--    <ol class="breadcrumb" style="margin-right: 500px;padding-right: 500px">--%>
+<%--        <li><a href="Accueil.jsp">Accueil</a></li>--%>
+<%--        <li class="active">Page en cours</li>--%>
+<%--    </ol>--%>
+
+<%--    <div class="breadcrumb flat">--%>
+<%--        <a href="Accueil.jsp">Accueil</a>--%>
+<%--        <a href="#" class="active">Admin</a>--%>
+<%--        <a href="#">Ajouter un utilisateur</a>--%>
+<%--        <a href="#">Ajouter un clien</a>--%>
+<%--    </div>--%>
 
 
     <div>

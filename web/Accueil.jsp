@@ -14,16 +14,20 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/WEB-INF/ressources/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="animate.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="h1.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="hover.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <style>
-    html{
+    html {
         height: 100%;
     }
-    header{
+
+    header {
         box-sizing: border-box;
         /*height: 150px;*/
         /*min-height: 740px;*/
@@ -32,7 +36,7 @@
         overflow: hidden;
     }
 
-    body{
+    body {
         background-color: whitesmoke;
         min-height: 100%;
         margin: 0;
@@ -40,35 +44,35 @@
         position: relative;
     }
 
-    footer{
+    footer {
         position: absolute;
         bottom: 0;
     }
 
-    #mainfooter{
+    #mainfooter {
         background-color: #31374a;
         width: 100%;
     }
 
-    #mainfooter::before{
-         background-color: #fd8224;
-         content: '';
-         display: block;
-         height: 4px;
-         width: 100%;
-     }
+    #mainfooter::before {
+        background-color: #fd8224;
+        content: '';
+        display: block;
+        height: 4px;
+        width: 100%;
+    }
 
-    #mainfooter .line:last-child{
+    #mainfooter .line:last-child {
         background-color: #212635;
     }
 
-    #mainfooter .line{
-        border-top: 1px solid rgba(255,255,255,0.1);
+    #mainfooter .line {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         overflow: hidden;
     }
 
-    .li{
+    .li {
         color: #ffffff;
         font-weight: 400;
         display: inline-block;
@@ -79,13 +83,13 @@
         font-size: 1.3rem;
     }
 
-    ul{
+    ul {
         list-style: none;
         vertical-align: baseline;
         /*text-space: 10;*/
     }
 
-    .menuTop{
+    .menuTop {
         background-color: #273b54;
         float: none;
         clear: both;
@@ -93,7 +97,7 @@
         height: 62px;
     }
 
-    .navMenu{
+    .navMenu {
         margin: 0;
         padding: 0;
         position: relative;
@@ -103,7 +107,7 @@
 
     }
 
-    .wrapper{
+    .wrapper {
         display: block;
         margin: 0 auto;
         position: relative;
@@ -111,7 +115,7 @@
         padding: 0 32px;
     }
 
-    #idnav{
+    #idnav {
         padding: 0;
         margin: 0;
         list-style-type: none;
@@ -125,11 +129,11 @@
 
     }
 
-    #idnav li a{
+    #idnav li a {
         color: #ffffff;
         width: 16.66%;
         text-align: center;
-        font-size: 17px!important;
+        font-size: 17px !important;
         /*font-weight: 200;*/
         float: left;
         line-height: 64px;
@@ -141,7 +145,7 @@
         font-size: 0.8em;
     }
 
-    .submenu{
+    .submenu {
         display: none;
         position: absolute;
         left: 2px;
@@ -151,58 +155,59 @@
         margin-top: -3px;
     }
 
-    #idnav li:hover .submenu{
+    #idnav li:hover .submenu {
         display: block;
         top: 60px;
     }
 
-    .nav-item{
+    .nav-item {
         float: left;
         position: relative;
     }
 
-    #searchbar{
+    #searchbar {
         position: relative;
         width: 400px;
         height: auto;
     }
 
-    .formulaire{
+    .formulaire {
         display: inline-block;
         margin-left: 100px;
     }
 
-    .formulaire .champ{
+    .formulaire .champ {
         width: 230px;
         height: 35px;
     }
 
-    .formulaire .bouton{
+    .formulaire .bouton {
         background-image: url("search.png");
         background-repeat: no-repeat;
         width: 35px;
         height: 30px;
         padding: 0;
-        box-shadow: none!important;
+        box-shadow: none !important;
     }
 
     .hot-container p {
         margin-top: 10px;
 
     }
-    .hot-container a{
+
+    .hot-container a {
         text-decoration: none;
         margin: 0 10px;
     }
 
-    .hot-container{
+    .hot-container {
         min-height: 50px;
         margin-top: 7px;
         width: 100%;
         text-align: center;
     }
 
-    a.btn{
+    a.btn {
         display: inline-block;
         color: #666666;
         background-color: #eeeeee;
@@ -213,35 +218,35 @@
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
-        border: 1px solid rgba(0,0,0,0.3);
+        border: 1px solid rgba(0, 0, 0, 0.3);
         border-bottom-width: 3px;
     }
 
     a.btn:hover {
         background-color: #e3e3e3;
-        border-color: rgba(0,0,0,0.5);
+        border-color: rgba(0, 0, 0, 0.5);
     }
 
     a.btn:active {
         background-color: #CCC;
-        border-color: rgba(0,0,0,0.9);
+        border-color: rgba(0, 0, 0, 0.9);
     }
 
-    #liClient{
+    #liClient {
         text-align: center;
         margin-left: 500px;
     }
 
-    #menuhaut{
+    #menuhaut {
         float: left;
         line-height: 0;
         display: block;
         box-sizing: border-box;
     }
 
-    #ulTop{
-        animation: none!important;
-        animation-duration: 0s!important;
+    #ulTop {
+        animation: none !important;
+        animation-duration: 0s !important;
         animation-timing-function: ease !important;
         animation-delay: 0s !important;
         animation-iteration-count: 1 !important;
@@ -254,7 +259,7 @@
         list-style: none;
     }
 
-    #ulTop li{
+    #ulTop li {
         display: inline-block;
         padding-right: 22px;
         font-size: 14px;
@@ -264,11 +269,11 @@
         text-align: -webkit-match-parent;
     }
 
-    .menu-item-has-children>a:first-child{
+    .menu-item-has-children > a:first-child {
         padding-right: 220px;
     }
 
-    .menu-item-has-children a{
+    .menu-item-has-children a {
         padding-bottom: -50px;
         padding-top: 20px;
         font-size: 1.2em;
@@ -287,7 +292,7 @@
 
     }
 
-    #top-search{
+    #top-search {
         display: block;
         float: right;
         position: relative;
@@ -296,8 +301,7 @@
     }
 
 
-
-    div{
+    div {
         display: block;
         margin: 0;
         padding: 0;
@@ -309,9 +313,7 @@
     }
 
 
-
-
-    #areaClients{
+    #areaClients {
         height: 380px;
         background-image: url("right-shape-yellow.svg");
         position: relative;
@@ -320,7 +322,7 @@
         background-repeat: no-repeat;
     }
 
-    .page-list-header-desc{
+    .page-list-header-desc {
         margin-left: 130px;
         flex: 1;
         height: 350px;
@@ -328,10 +330,10 @@
         float: left;
     }
 
-    .page-list-header-desc h1{
+    .page-list-header-desc h1 {
         padding-bottom: 24px;
         color: #28336d;
-        font-size: 54px!important;
+        font-size: 54px !important;
     }
 
     p {
@@ -344,18 +346,18 @@
         margin-inline-end: 0px;
     }
 
-    .page-list-header-visu img{
+    .page-list-header-visu img {
         display: block;
         max-width: 65%;
         margin: 0 auto;
         padding-top: 13px;
     }
 
-    img{
+    img {
         height: auto;
     }
 
-    .page-list-header-visu{
+    .page-list-header-visu {
         flex: 1;
         height: 350px;
         width: 37%;
@@ -364,9 +366,9 @@
         margin-left: 60%;
     }
 
-    #scrollUp{
+    #scrollUp {
         position: fixed;
-        bottom : 100px;
+        bottom: 100px;
         /*right: -100px;*/
         opacity: 0.5;
     }
@@ -377,89 +379,104 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img class="button animated bounce" src="gfi.png" alt="logo" width="130">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img class="button animated bounce" src="gfi.png" alt="logo" width="130">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
 
-<%--        <div class="hot-container">--%>
-<%--            <p>--%>
-<%--                <a href="Admin.jsp" class="btn">Vue Admin</a>--%>
-<%--            </p>--%>
-<%--        </div>--%>
+            <%--        <div class="hot-container">--%>
+            <%--            <p>--%>
+            <%--                <a href="Admin.jsp" class="btn">Vue Admin</a>--%>
+            <%--            </p>--%>
+            <%--        </div>--%>
 
-        <nav id="menuhaut">
-            <ul id="ulTop">
-                <li class="menu-item menu-item-has-children"><a href="Accueil.jsp" class="hvr-float">Clients</a></li>
-                <li id="adminbtn" class="menu-item menu-item-has-children"><a href="Admin.jsp" class="hvr-float">Vue Admin</a></li>
-            </ul>
-        </nav>
+            <nav id="menuhaut">
+                <ul id="ulTop">
+                    <li class="menu-item menu-item-has-children"><a href="Accueil.jsp" class="hvr-float">Clients</a>
+                    </li>
+                    <li id="adminbtn" class="menu-item menu-item-has-children"><a href="Admin.jsp" class="hvr-float">Vue
+                        Admin</a></li>
+                </ul>
+            </nav>
 
 
+            <%--        <div id="searchbar">--%>
+            <%--            <form action="" class="formulaire">--%>
+            <%--                <input class="champ" type="text" placeholder="Search..."/>--%>
+            <%--                <input class="bouton" type="submit" value=" "/>--%>
+            <%--            </form>--%>
+            <%--        </div>--%>
+            <%--        <div class="collapse navbar-collapse" id="navbarResponsive">--%>
+            <%--            <ul class="navbar-nav ml-auto">--%>
+            <%--                <li class="nav-item active">--%>
+            <%--                    <a class="nav-link" href="Accueil.jsp">Home--%>
+            <%--                        <span class="sr-only">(current)</span>--%>
+            <%--                    </a>--%>
+            <%--                </li>--%>
+            <%--                <li class="nav-item">--%>
+            <%--                    <a class="nav-link" href="Infos.jsp">Informations pratiques</a>--%>
+            <%--                </li>--%>
 
-<%--        <div id="searchbar">--%>
-<%--            <form action="" class="formulaire">--%>
-<%--                <input class="champ" type="text" placeholder="Search..."/>--%>
-<%--                <input class="bouton" type="submit" value=" "/>--%>
-<%--            </form>--%>
-<%--        </div>--%>
-<%--        <div class="collapse navbar-collapse" id="navbarResponsive">--%>
-<%--            <ul class="navbar-nav ml-auto">--%>
-<%--                <li class="nav-item active">--%>
-<%--                    <a class="nav-link" href="Accueil.jsp">Home--%>
-<%--                        <span class="sr-only">(current)</span>--%>
-<%--                    </a>--%>
-<%--                </li>--%>
-<%--                <li class="nav-item">--%>
-<%--                    <a class="nav-link" href="Infos.jsp">Informations pratiques</a>--%>
-<%--                </li>--%>
+            <%--            </ul>--%>
 
-<%--            </ul>--%>
-
-<%--            <div class="hot-container" id="deco">--%>
-<%--                <p>--%>
-<%--                    <a href="deconnexion.jsp" class="btn btn-red">Deconnexion</a>--%>
-<%--                </p>--%>
-<%--            </div>--%>
+            <%--            <div class="hot-container" id="deco">--%>
+            <%--                <p>--%>
+            <%--                    <a href="deconnexion.jsp" class="btn btn-red">Deconnexion</a>--%>
+            <%--                </p>--%>
+            <%--            </div>--%>
 
         </div>
 
+        <div class="wrapper2">
+            <button onclick="deco()" class="btn btn-4 btn-4a icon-arrow-right hvr-overline-from-right">Deconnexion
+            </button>
+        </div>
 
-    </div>
+
+        </div>
 
     </nav>
 
-<%--    <div class="menuTop">--%>
-<%--        <div class="wrapper">--%>
-<%--            <nav class="navMenu">--%>
-<%--                <ul id="idnav">--%>
-<%--                    <li><a id="liClient" class="hvr-wobble-skew" href="Clients.jsp" style="font-size: 14px"> Mes Clients</a>--%>
-<%--&lt;%&ndash;                        <ul class="submenu">&ndash;%&gt;--%>
-<%--&lt;%&ndash;                            <li class="nav-item"><a href="myClients.jsp">Mes clients</a></li>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                        </ul>&ndash;%&gt;--%>
-<%--                    </li>--%>
-<%--&lt;%&ndash;                    <li><a href="Autre.jsp" style="font-size: 14px">Others</a>&ndash;%&gt;--%>
-<%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
-<%--                </ul>--%>
-<%--            </nav>--%>
-<%--        </div>--%>
-<%--    </div>--%>
+    <%--    <div class="menuTop">--%>
+    <%--        <div class="wrapper">--%>
+    <%--            <nav class="navMenu">--%>
+    <%--                <ul id="idnav">--%>
+    <%--                    <li><a id="liClient" class="hvr-wobble-skew" href="Clients.jsp" style="font-size: 14px"> Mes Clients</a>--%>
+    <%--&lt;%&ndash;                        <ul class="submenu">&ndash;%&gt;--%>
+    <%--&lt;%&ndash;                            <li class="nav-item"><a href="myClients.jsp">Mes clients</a></li>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;                        </ul>&ndash;%&gt;--%>
+    <%--                    </li>--%>
+    <%--&lt;%&ndash;                    <li><a href="Autre.jsp" style="font-size: 14px">Others</a>&ndash;%&gt;--%>
+    <%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
+    <%--                </ul>--%>
+    <%--            </nav>--%>
+    <%--        </div>--%>
+    <%--    </div>--%>
 
 
 </header>
 
 <div id="areaClients">
     <div class="page-list-header-desc" style="padding-top: 50px">
-        <h1>Mes clients</h1>
+        <%--        <h1>Mes clients</h1>--%>
+        <h1 class="ml1">
+  <span class="text-wrapper">
+    <span class="line line1"></span>
+    <span class="letters" style="font-family: 'Ostrich Sans'">MES CLIENTS</span>
+    <span class="line line2"></span>
+  </span>
+        </h1>
         <div>
-            <p>Avec votre nouvel intranet, vous disposez de toutes les informations nécessaires concernant vos clients. Alors n'hésitez pas à le consulter régulièrement!</p>
+            <p>Avec votre nouvel intranet, vous disposez de toutes les informations nécessaires concernant vos clients.
+                Alors n'hésitez pas à le consulter régulièrement!</p>
         </div>
     </div>
-    
+
     <div class="page-list-header-visu">
         <img src="customer-stories-header-key-visual.png">
     </div>
@@ -470,7 +487,7 @@
 </div>
 
 <%
-    for(int i=0;i<50;i++){
+    for (int i = 0; i < 50; i++) {
         out.write("<br>");
     }
 %>
@@ -484,9 +501,12 @@
         <div class="section">
             <nav>
                 <ul>
-                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/home/mentions-legales">Mentions légales</a></li>
-                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/home/plan-du-site"> Plan du site</a></li>
-                    <li class="li"><a style="text-decoration: none" href="https://www.gfi.world/fr-fr/contact">Contact</a> </li>
+                    <li class="li"><a style="text-decoration: none"
+                                      href="https://www.gfi.world/fr-fr/home/mentions-legales">Mentions légales</a></li>
+                    <li class="li"><a style="text-decoration: none"
+                                      href="https://www.gfi.world/fr-fr/home/plan-du-site"> Plan du site</a></li>
+                    <li class="li"><a style="text-decoration: none"
+                                      href="https://www.gfi.world/fr-fr/contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -505,7 +525,7 @@
 <script type="text/javascript">
     var session_obj = '<%=session_val%>';
 
-    if(session_obj !== 'admin'){
+    if (session_obj !== 'admin') {
         document.querySelector('#adminbtn').style.display = 'none';
     }
 
@@ -513,11 +533,53 @@
 </script>
 
 <script type="text/javascript">
-    $(function() {
-        $('a[href=#header]').click(function(){
-            $('html').animate({scrollTop:0}, 'slow');
+    $(function () {
+        $('a[href=#header]').click(function () {
+            $('html').animate({scrollTop: 0}, 'slow');
             return false;
         });
+    });
+</script>
+
+<script>
+    function deco() {
+        document.location.href = "deconnexion.jsp";
+    }
+</script>
+
+<script>
+    // Wrap every letter in a span
+    $('.ml1 .letters').each(function () {
+        $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({loop: true})
+        .add({
+            targets: '.ml1 .letter',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            translateZ: 0,
+            easing: "easeOutExpo",
+            duration: 600,
+            delay: function (el, i) {
+                return 70 * (i + 1)
+            }
+        }).add({
+        targets: '.ml1 .line',
+        scaleX: [0, 1],
+        opacity: [0.5, 1],
+        easing: "easeOutExpo",
+        duration: 700,
+        offset: '-=875',
+        delay: function (el, i, l) {
+            return 80 * (l - i);
+        }
+    }).add({
+        targets: '.ml1',
+        opacity: 0,
+        duration: 1000,
+        easing: "easeOutExpo",
+        delay: 1000
     });
 </script>
 
