@@ -11,7 +11,7 @@ public class ClientDAO {
 
     public static void create(Client client){
         try(Connection con = new DS().getConnection()){
-            String query = "INSERT INTO client (nom,confluence,ticketting,sla,contact,plage) VALUES (?,?,?,?,?,?)";
+            String query = "INSERT INTO client (nom,confluence,ticketting,sla,contact,plage,img) VALUES (?,?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1,client.getNom());
             ps.setString(2,client.getConfluence());
@@ -19,6 +19,7 @@ public class ClientDAO {
             ps.setString(4,client.getSla());
             ps.setString(5,client.getContact());
             ps.setString(6,client.getPlage());
+            ps.setString(7,client.getImg());
             ps.executeUpdate();
         }catch (Exception e){
             e.printStackTrace();
@@ -33,7 +34,7 @@ public class ClientDAO {
             ResultSet rs = ps.executeQuery();
             rs.next();
 
-            return new Client(rs.getString("nom"),rs.getString("confluence"),rs.getString("ticketting"),rs.getString("sla"),rs.getString("contact"),rs.getString("plage"));
+            return new Client(rs.getString("nom"),rs.getString("confluence"),rs.getString("ticketting"),rs.getString("sla"),rs.getString("contact"),rs.getString("plage"),rs.getString("img"));
         }catch (Exception e){
             e.printStackTrace();
         }

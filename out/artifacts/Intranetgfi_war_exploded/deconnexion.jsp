@@ -19,6 +19,5 @@
         response.sendRedirect("Authentification.jsp");
     }
 %>
-
 </body>
 </html>

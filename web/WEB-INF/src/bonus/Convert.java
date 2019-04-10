@@ -13,7 +13,7 @@ public class Convert {
         Print print = new Print();
 
         try{
-            print.setFileName("C:\\Users\\theo.lietard-tmp\\Desktop\\mesregles.txt");
+            print.setFileName("C:\\Users\\theo.lietard-tmp\\Desktop\\oooooooo.txt");
             read.setPrint(print);
             read.exec(1);
         }catch (IOException ex){

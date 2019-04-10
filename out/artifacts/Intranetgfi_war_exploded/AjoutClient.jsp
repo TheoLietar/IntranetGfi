@@ -338,6 +338,9 @@
                 <input type="text" name="contact" class="field-style field-full align-none" placeholder="Contact" />
             </li>
             <li>
+                <input type="text" name="img" class="field-style field-split align-left" placeholder="Lien image PNG" />
+            </li>
+            <li>
                 <input type="text" name="plage" class="field-style" placeholder="Plage de service" />
             </li>
             <li>

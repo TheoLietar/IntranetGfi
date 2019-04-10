@@ -37,7 +37,7 @@ public class Read {
                     new FileReader(this.fileName));
 
             while((s = this.bufferedReader.readLine()) != null) {
-                String[] columns = s.split(",");
+                String[] columns = s.split("\"");
                 int length = columns.length;
                 if(type == 1) {
                     this.print.addRow2(columns);

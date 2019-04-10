@@ -458,7 +458,7 @@
                 </div>
                 <div class="modal-footer">
 <%--                    ::before--%>
-                    <input type="button" class="btn btn-default" value="Cancel">
+                    <input type="button" onclick="cancel()" class="btn btn-default" value="Cancel">
                     <input type="submit" class="btn btn-info" value="Save">
 <%--                    ::after--%>
                 </div>
@@ -500,6 +500,12 @@
     function render() {
         event.preventDefault();
         document.location.href="UpdateForm.jsp";
+    }
+</script>
+<script>
+    function cancel() {
+        event.preventDefault();
+        document.location.href = "Admin.jsp";
     }
 </script>
 

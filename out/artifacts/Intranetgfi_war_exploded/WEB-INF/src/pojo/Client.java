@@ -7,14 +7,16 @@ public class Client {
     public String sla;
     public String contact;
     public String plage;
+    public String img;
 
-    public Client(String nom, String confluence, String ticketting, String sla, String contact, String plage) {
+    public Client(String nom, String confluence, String ticketting, String sla, String contact, String plage,String img) {
         this.nom = nom;
         this.confluence = confluence;
         this.ticketting = ticketting;
         this.sla = sla;
         this.contact = contact;
         this.plage = plage;
+        this.img = img;
     }
 
     public String getNom() {
@@ -63,5 +65,13 @@ public class Client {
 
     public void setPlage(String plage) {
         this.plage = plage;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }

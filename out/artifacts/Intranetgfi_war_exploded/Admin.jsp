@@ -1,6 +1,8 @@
+<%--suppress BadExpressionStatementJS --%>
 <%@ page import="ds.DS" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="DAO.UserDAO" %><%--
+<%@ page import="DAO.UserDAO" %>
+<%--
   Created by IntelliJ IDEA.
   User: theo
   Date: 01/04/19
@@ -8,12 +10,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portail</title>
+    <link rel="stylesheet" href="popup.css">
     <link rel="stylesheet" href="animate.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="hover.css">
@@ -26,6 +30,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="main.js"></script>
 </head>
 <style>
 
@@ -285,9 +290,11 @@
 
     .page-list-header-desc h1{
         padding-bottom: 24px;
-        color: #28336d;
+        /*color: #28336d;*/
+        color: darkred;
         font-size: 54px!important;
     }
+
 
     .page-list-header-desc{
         margin-left: 130px;
@@ -301,17 +308,17 @@
         height: 380px;
         background-image: url("right-shape-yellow.svg");
         position: relative;
-        background-color: #f7f7f7;
+        /*background-color: black;*/
         background-position: 100% 100%;
         background-repeat: no-repeat;
     }
 </style>
-<body>
+<body style="overflow: hidden">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
             <a class="navbar-brand" href="Accueil.jsp">
-                <img  class="button animated bounce" src="gfi.png" alt="logo" width="130">
+                <img class="button animated bounce" src="gfi.png" alt="logo" width="130">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -323,20 +330,20 @@
                     <a href="Accueil.jsp" class="btn">Vue normale</a>
                 </p>
             </div>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="Accueil.jsp">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Infos.jsp">Informations pratiques</a>
-                    </li>
+<%--            <div class="collapse navbar-collapse" id="navbarResponsive">--%>
+<%--                <ul class="navbar-nav ml-auto">--%>
+<%--                    <li class="nav-item active">--%>
+<%--                        <a class="nav-link" href="Accueil.jsp">Home--%>
+<%--                            <span class="sr-only">(current)</span>--%>
+<%--                        </a>--%>
+<%--                    </li>--%>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link" href="Infos.jsp">Informations pratiques</a>--%>
+<%--                    </li>--%>
 
-                </ul>
+<%--                </ul>--%>
 
-            </div>
+<%--            </div>--%>
         </div>
 
         <div class="wrapper2">
@@ -351,7 +358,7 @@
                 <ul id="idnav">
                     <li><a class="hvr-bounce-in" onclick="return addForm()" style="font-size: 14px" id="addClient">Ajouter un client</a>
                     </li>
-                    <li><a class="hvr-bounce-in" href="SignUp.jsp"  style="font-size: 14px" id="addUser">Ajouter un utilisateur</a>
+                    <li><a class="hvr-bounce-in" onclick="return addUser()" style="font-size: 14px" id="addUser">Ajouter un utilisateur</a>
                     </li>
                 </ul>
             </nav>
@@ -390,6 +397,9 @@
                     <input type="text" name="plage" class="field-style" placeholder="Plage de service" />
                 </li>
                 <li>
+                    <input type="text" name="img" class="field-style field-split align-left" placeholder="Lien image" />
+                </li>
+                <li>
                     <input type="submit" value="Ajouter Client" />
                 </li>
             </ul>
@@ -397,6 +407,8 @@
     </div>
 
 </header>
+
+
 
 <div id="areaClients">
     <div class="page-list-header-desc" style="padding-top: 50px">
@@ -423,7 +435,19 @@
 <%--<h1 style="text-align: center" id="mesUsers">Mes utilisateurs</h1>--%>
 <br>
 
-<div class="divTable" style="padding-bottom: 150px">
+<div id="abc">
+    <div id="popupDel">
+        <form action="ControlerDel" id="form" method="post" name="form">
+            <img src="close-icon3.png" id="close" onClick="div_hide();">
+            <h2>DELETE USER</h2>
+            <hr>
+            <input id="login" name="login" placeholder="Login" type="text">
+            <a href="javascript:check_empty()" id="submit">Send</a>
+        </form>
+    </div>
+</div>
+
+<div class="divTable fadeIn" style="padding-bottom: 150px">
     <table id="tableUser" class="table table-striped table-hover" style="visibility: visible">
         <thead>
         <tr>
@@ -446,20 +470,24 @@
 
                 while(rs.next()){
                     out.write("<tr>");
+                    String log = rs.getString(2);
+
 
                     for(int i=1; i<=rsmd.getColumnCount();i++){
                         String tmp = rs.getString(i);
+
                         System.out.println(i + rs.getString(i));
                         if(i == 3){
                             out.write("<td class=\"hidetext\">" + tmp + "</td>");
                         }else{
-                            out.write("<td>" + tmp + "</td>");
+                            out.write("<td name=\"tutu\" id="+log+">" + tmp + "</td>");
                         }
                     }
 
-                    out.write("<td>\n" +
+
+                    out.write("<td>" +
                             "                            <a href=\"#editUser\" onClick=\"render();\"class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" title=\"Edit\">&#xE254;</i></a>\n" +
-                            "                            <a href=\"onClick=del();\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>\n" +
+                            "                            <a name=\""+log+"\" onClick=\"del2(\'"+log+"\')\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>\n" +
                             "                        </td>");
                     out.write("</tr>");
 
@@ -472,6 +500,8 @@
     </table>
 
 </div>
+
+
 
 <div id="editUser" class="modal fade" >
     <div class="modal-dialog">
@@ -542,6 +572,12 @@
     }
 </script>
 <script>
+    function addUser() {
+        event.preventDefault();
+        document.location.href = "SignUp.jsp"
+    }
+</script>
+<script>
     function render() {
         event.preventDefault();
         document.location.href="UpdateForm.jsp";
@@ -555,7 +591,22 @@
 
 <script>
     function deco() {
+        event.preventDefault();
         document.location.href="deconnexion.jsp";
+        <%
+        System.out.println(request.getAttribute("login"));
+        %>
+    }
+</script>
+<script>
+    function del() {
+        event.preventDefault();
+        document.getElementById('abc').style.display = "block";
+    }
+</script>
+<script>
+    function del2(log){
+        document.location.href = "Delete.jsp?log="+log;
     }
 </script>
 <script>

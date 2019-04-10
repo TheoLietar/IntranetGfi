@@ -21,8 +21,9 @@ public class ControlerAddClient extends HttpServlet {
         String sla = req.getParameter("sla");
         String contact = req.getParameter("contact");
         String plage = req.getParameter("plage");
+        String img = req.getParameter("img");
 
-        ClientDAO.create(new Client(nom,confluence,ticketting,sla,contact,plage));
+        ClientDAO.create(new Client(nom,confluence,ticketting,sla,contact,plage,img));
 
         resp.sendRedirect("Accueil.jsp");
     }

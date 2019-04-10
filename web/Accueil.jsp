@@ -1,4 +1,8 @@
-<%--
+<%@ page import="java.sql.Connection" %>
+<%@ page import="ds.DS" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.ResultSetMetaData" %><%--
   Created by IntelliJ IDEA.
   User: theo
   Date: 01/04/19
@@ -14,12 +18,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/WEB-INF/ressources/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="h1.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="hover.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="main.js"></script>
+    <script src="Dropdown.js"></script>
 </head>
 
 <style>
@@ -36,9 +45,13 @@
         overflow: hidden;
     }
 
+    .contain{
+        position: relative;
+    }
     body {
         background-color: whitesmoke;
         min-height: 100%;
+        height: auto;
         margin: 0;
         padding: 0;
         position: relative;
@@ -317,7 +330,7 @@
         height: 380px;
         background-image: url("right-shape-yellow.svg");
         position: relative;
-        background-color: #f7f7f7;
+        background-color: black;
         background-position: 100% 100%;
         background-repeat: no-repeat;
     }
@@ -332,10 +345,10 @@
 
     .page-list-header-desc h1 {
         padding-bottom: 24px;
-        color: #28336d;
+        /*color: #28336d;*/
+        color: red;
         font-size: 54px !important;
     }
-
     p {
         font-family: 'Poppins', 'Helvetica', 'Arial', 'Lucida', 'sans-serif';
         font-weight: 300;
@@ -344,6 +357,7 @@
         margin-block-end: 1em;
         margin-inline-start: 0px;
         margin-inline-end: 0px;
+        color: white;
     }
 
     .page-list-header-visu img {
@@ -373,10 +387,57 @@
         opacity: 0.5;
     }
 
+    hr {
+        width: 50%;
+        color: #273b54;
+        border: 1px solid darkblue;
+    }
+
+    .back-to-top {
+        right: 40px;
+        bottom: 180px;
+        border: none;
+        color: rgba(0, 0, 0, .4);
+        display: none;
+        outline: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        position: fixed;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        transform-origin: 100% 50%;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        z-index: 1;
+    }
+
+    .back-to-top:focus {
+        color: #000;
+    }
+
+    .back-to-top:hover i {
+        -webkit-transform: translateX(10px);
+        -moz-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+        -o-transform: translateX(10px);
+        transform: translateX(10px)
+    }
+
+    .back-to-top:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+
 </style>
 
-
-<body>
+<body id="body">
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
@@ -388,47 +449,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-
-            <%--        <div class="hot-container">--%>
-            <%--            <p>--%>
-            <%--                <a href="Admin.jsp" class="btn">Vue Admin</a>--%>
-            <%--            </p>--%>
-            <%--        </div>--%>
-
-            <nav id="menuhaut">
+            <nav id="menuhaut" class="transition">
                 <ul id="ulTop">
                     <li class="menu-item menu-item-has-children"><a href="Accueil.jsp" class="hvr-float">Clients</a>
                     </li>
-                    <li id="adminbtn" class="menu-item menu-item-has-children"><a href="Admin.jsp" class="hvr-float">Vue
+                    <li id="adminbtn" class="menu-item menu-item-has-children"><a href="Admin.jsp"
+                                                                                  class="hvr-float cta">Vue
                         Admin</a></li>
                 </ul>
             </nav>
 
-
-            <%--        <div id="searchbar">--%>
-            <%--            <form action="" class="formulaire">--%>
-            <%--                <input class="champ" type="text" placeholder="Search..."/>--%>
-            <%--                <input class="bouton" type="submit" value=" "/>--%>
-            <%--            </form>--%>
-            <%--        </div>--%>
-            <%--        <div class="collapse navbar-collapse" id="navbarResponsive">--%>
-            <%--            <ul class="navbar-nav ml-auto">--%>
-            <%--                <li class="nav-item active">--%>
-            <%--                    <a class="nav-link" href="Accueil.jsp">Home--%>
-            <%--                        <span class="sr-only">(current)</span>--%>
-            <%--                    </a>--%>
-            <%--                </li>--%>
-            <%--                <li class="nav-item">--%>
-            <%--                    <a class="nav-link" href="Infos.jsp">Informations pratiques</a>--%>
-            <%--                </li>--%>
-
-            <%--            </ul>--%>
-
-            <%--            <div class="hot-container" id="deco">--%>
-            <%--                <p>--%>
-            <%--                    <a href="deconnexion.jsp" class="btn btn-red">Deconnexion</a>--%>
-            <%--                </p>--%>
-            <%--            </div>--%>
 
         </div>
 
@@ -442,61 +472,118 @@
 
     </nav>
 
-    <%--    <div class="menuTop">--%>
-    <%--        <div class="wrapper">--%>
-    <%--            <nav class="navMenu">--%>
-    <%--                <ul id="idnav">--%>
-    <%--                    <li><a id="liClient" class="hvr-wobble-skew" href="Clients.jsp" style="font-size: 14px"> Mes Clients</a>--%>
-    <%--&lt;%&ndash;                        <ul class="submenu">&ndash;%&gt;--%>
-    <%--&lt;%&ndash;                            <li class="nav-item"><a href="myClients.jsp">Mes clients</a></li>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;                        </ul>&ndash;%&gt;--%>
-    <%--                    </li>--%>
-    <%--&lt;%&ndash;                    <li><a href="Autre.jsp" style="font-size: 14px">Others</a>&ndash;%&gt;--%>
-    <%--&lt;%&ndash;                    </li>&ndash;%&gt;--%>
-    <%--                </ul>--%>
-    <%--            </nav>--%>
-    <%--        </div>--%>
-    <%--    </div>--%>
-
 
 </header>
-
-<div id="areaClients">
-    <div class="page-list-header-desc" style="padding-top: 50px">
-        <%--        <h1>Mes clients</h1>--%>
-        <h1 class="ml1">
+<div class="contain">
+    <div id="areaClients">
+        <div class="page-list-header-desc" style="padding-top: 50px">
+            <h1 class="ml1">
   <span class="text-wrapper">
     <span class="line line1"></span>
     <span class="letters" style="font-family: 'Ostrich Sans'">MES CLIENTS</span>
     <span class="line line2"></span>
   </span>
-        </h1>
-        <div>
-            <p>Avec votre nouvel intranet, vous disposez de toutes les informations nécessaires concernant vos clients.
-                Alors n'hésitez pas à le consulter régulièrement!</p>
+            </h1>
+            <div>
+                <p>Avec votre nouvel intranet, vous disposez de toutes les informations nécessaires concernant vos
+                    clients.
+                    Alors n'hésitez pas à le consulter régulièrement!</p>
+            </div>
+        </div>
+
+        <div class="page-list-header-visu">
+            <img src="customer-stories-header-key-visual.png">
         </div>
     </div>
 
-    <div class="page-list-header-visu">
-        <img src="customer-stories-header-key-visual.png">
+    <div class="myClients" style="width: 500px">
+
     </div>
+
+    <%
+        for (int i = 0; i < 2; i++) {
+            out.write("<br>");
+        }
+    %>
+    <br>
+
+<%--    <div class="wrapperGrid">--%>
+<%--        <%--%>
+<%--            try (Connection con = new DS().getConnection()) {--%>
+<%--                String query = "SELECT * FROM client";--%>
+<%--                PreparedStatement ps = con.prepareStatement(query);--%>
+<%--                ResultSet rs = ps.executeQuery();--%>
+<%--                ResultSetMetaData rsmd = rs.getMetaData();--%>
+
+<%--                while (rs.next()) {--%>
+<%--                    System.out.println(rs.getString(8));--%>
+<%--                    out.write("<div class=\"box\" style=\"background: url(" + rs.getString(8) + ")\"><p class=\"boxp\">" + rs.getString(2) + "</p>");--%>
+
+<%--                    out.write("<div class=\"niveau2\">");--%>
+<%--                    out.write("<ul>");--%>
+<%--                    out.write("<li><a href=\"" + rs.getString(3) + "\">Confluence</a></li>");--%>
+<%--                    out.write("<li><a href=\"" + rs.getString(4) + "\">Ticketting</a></li>");--%>
+<%--                    out.write("<li><a href=\"" + rs.getString(5) + "\">SLA</a></li>");--%>
+<%--                    out.write("<li><a href=\"" + rs.getString(6) + "\">Contact</a></li>");--%>
+<%--                    out.write("<li><a href=\"" + rs.getString(7) + "\">Plage service</a></li>");--%>
+<%--                    out.write("</ul>");--%>
+<%--                    out.write("</div>");--%>
+<%--                    out.write("</div>");--%>
+
+<%--                }--%>
+<%--            }--%>
+<%--        %>--%>
+<%--    </div>--%>
+
+    <div class="ap-container-1 ap-container-wrap">
+        <div class="ap-container">
+            <div class="smls-main-logo-outer-838031243 smls-main-logo-wrapper smls-resposive-wrap" data-logo-type="without_filter">
+                <div class="smls-list-container-template-1 smls-overlay-effect">
+                    <%
+                        try(Connection con = new DS().getConnection()){
+                            String query = "SELECT * FROM client";
+                            PreparedStatement ps = con.prepareStatement(query);
+                            ResultSet rs = ps.executeQuery();
+                            ResultSetMetaData rsmd = rs.getMetaData();
+
+                            while(rs.next()){
+                                out.write("<div class=\"smls-list-block clearfix hide-animation fadeIn\">");
+                                out.write("<div class=\"smls-list-image-wrap smls-icon-center\">");
+                                out.write("<div class=\"smls-inline-image-wrap\">");
+                                out.write("<img src=\""+rs.getString(8)+"\">");
+                                out.write("<div class=\"smls-overlay-wrap\"></div>");
+                                out.write("</div>");
+                                out.write("</div>");
+                                out.write("<div class=\"smls-list-detail-wrap\">");//Ouvre le detail-wrap
+                                out.write("<div class=\"smls-list-title\">"+ rs.getString(2) + "</div>");
+                                out.write("<div class=\"smls-list-description\">");
+                                out.write("<ul>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(3) + "\">Confluence</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(4) + "\">Ticketting</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(5) + "\">SLA</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(6) + "\">Contact</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(7) + "\">Plage service</a></li>");
+                                out.write("</ul>");
+                                out.write("</div>");
+                                out.write("</div>");
+                                out.write("</div>");//ferme le detail-wrap
+                                out.write("<hr>");
+                            }
+                        }
+                    %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
 </div>
-
-<div class="myClients" style="width: 500px">
-
-</div>
-
-<%
-    for (int i = 0; i < 50; i++) {
-        out.write("<br>");
-    }
-%>
 
 <footer id="mainfooter">
     <div class="line">
-
     </div>
-
     <div class="line">
         <div class="section">
             <nav>
@@ -514,12 +601,16 @@
 
 </footer>
 
+<a href="#" class="back-to-top" style="display: block">
+    <span>Scroll to Top</span>
+    <i class="icon-right"></i>
+</a>
+
 </body>
 </html>
 
 <%
     String session_val = (String) session.getAttribute("login");
-    System.out.println(session_val);
 %>
 
 <script type="text/javascript">
@@ -540,19 +631,16 @@
         });
     });
 </script>
-
 <script>
     function deco() {
         document.location.href = "deconnexion.jsp";
     }
 </script>
-
 <script>
     // Wrap every letter in a span
     $('.ml1 .letters').each(function () {
         $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
     });
-
     anime.timeline({loop: true})
         .add({
             targets: '.ml1 .letter',
@@ -582,4 +670,3 @@
         delay: 1000
     });
 </script>
-
