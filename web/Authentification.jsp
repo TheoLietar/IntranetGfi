@@ -125,6 +125,12 @@
 </style>
 
 <body>
+<%
+    session = request.getSession(true);
+    if(session.getAttribute("login") != null){
+        response.sendRedirect("Accueil.jsp");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">

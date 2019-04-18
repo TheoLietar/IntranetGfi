@@ -13,7 +13,7 @@
 <body>
 
 <%
-    HttpSession Session = request.getSession();
+    HttpSession Session = request.getSession(true);
     if(Session != null){
         Session.invalidate();
         response.sendRedirect("Authentification.jsp");

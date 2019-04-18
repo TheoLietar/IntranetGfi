@@ -291,6 +291,13 @@
 </style>
 
 <body>
+<%
+    session = request.getSession(true);
+    System.out.println(session.getAttribute("login"));
+    if(session.getAttribute("login") == null){
+        response.sendRedirect("Authentification.jsp");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
@@ -308,12 +315,6 @@
                 </p>
             </div>
 
-            <%--        <div id="searchbar">--%>
-            <%--            <form action="" class="formulaire">--%>
-            <%--                <input class="champ" type="text" placeholder="Search..."/>--%>
-            <%--                <input class="bouton" type="submit" value=" "/>--%>
-            <%--            </form>--%>
-            <%--        </div>--%>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -344,89 +345,11 @@
         </div>
     </div>
 
-<%--    <div>--%>
-<%--        <form action="ControlerAddClient" id="formClient" class="form-style-9" style="visibility: hidden">--%>
-<%--            <ul>--%>
-<%--                <li>--%>
-<%--                    <input type="text" name="nom" class="field-style field-split align-left" placeholder="Nom Client" />--%>
-<%--                    <input type="text" name="confluence" class="field-style field-split align-right" placeholder="Lien confluence" />--%>
-
-<%--                </li>--%>
-<%--                <li>--%>
-<%--                    <input type="text" name="ticketting" class="field-style field-split align-left" placeholder="Lien vers outil ticketting" />--%>
-<%--                    <input type="text" name="sla" class="field-style field-split align-right" placeholder="Lien SLA" />--%>
-<%--                </li>--%>
-<%--                <li>--%>
-<%--                    <input type="text" name="contact" class="field-style field-full align-none" placeholder="Contact" />--%>
-<%--                </li>--%>
-<%--                <li>--%>
-<%--                    <input type="text" name="plage" class="field-style" placeholder="Plage de service" />--%>
-<%--                </li>--%>
-<%--                <li>--%>
-<%--                    <input type="submit" value="Ajouter Client" />--%>
-<%--                </li>--%>
-<%--            </ul>--%>
-<%--        </form>--%>
-<%--    </div>--%>
-
 </header>
 
 
 <br>
 <br>
-<%--<h1 style="text-align: center" id="mesUsers">Mes utilisateurs</h1>--%>
-<%--<br>--%>
-
-<%--<div class="divTable">--%>
-<%--    <table id="tableUser" class="table table-striped table-hover" style="visibility: visible">--%>
-<%--        <thead>--%>
-<%--        <tr>--%>
-<%--            <th>id--%>
-<%--            </th>--%>
-<%--            <th>Login</th>--%>
-<%--            <th>Password</th>--%>
-<%--            <th>Nom</th>--%>
-<%--            <th>Prenom</th>--%>
-<%--            <th>Actions</th>--%>
-<%--        </tr>--%>
-<%--        </thead>--%>
-<%--        <tbody>--%>
-<%--        <%--%>
-<%--            try(Connection con = new DS().getConnection()){--%>
-<%--                String query = "SELECT * FROM utilisateur";--%>
-<%--                PreparedStatement ps = con.prepareStatement(query);--%>
-<%--                ResultSet rs = ps.executeQuery();--%>
-<%--                ResultSetMetaData rsmd = rs.getMetaData();--%>
-
-<%--                while(rs.next()){--%>
-<%--                    out.write("<tr>");--%>
-
-
-<%--                    for(int i=1; i<=rsmd.getColumnCount();i++){--%>
-<%--                        String tmp = rs.getString(i);--%>
-<%--                        System.out.println(i + rs.getString(i));--%>
-<%--                        if(i == 3){--%>
-<%--                            out.write("<td class=\"hidetext\">" + tmp + "</td>");--%>
-<%--                        }else{--%>
-<%--                            out.write("<td>" + tmp + "</td>");--%>
-<%--                        }--%>
-<%--                    }--%>
-
-<%--                    out.write("<td>\n" +--%>
-<%--                            "                            <a href=\"#editUser\" onClick=\"render();\"class=\"edit\" data-toggle=\"modal\"><i class=\"material-icons\" title=\"Edit\">&#xE254;</i></a>\n" +--%>
-<%--                            "                            <a href=\"#deleteEmployeeModal\" class=\"delete\" data-toggle=\"modal\"><i class=\"material-icons\" data-toggle=\"tooltip\" title=\"Delete\">&#xE872;</i></a>\n" +--%>
-<%--                            "                        </td>");--%>
-<%--                    out.write("</tr>");--%>
-
-<%--                }--%>
-<%--            }catch (Exception e){--%>
-<%--                e.printStackTrace();--%>
-<%--            }--%>
-<%--        %>--%>
-<%--        </tbody>--%>
-<%--    </table>--%>
-
-<%--</div>--%>
 
 <div id="editUser" style="height: 600px">
     <div class="modal-dialog">

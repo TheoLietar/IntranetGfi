@@ -192,15 +192,6 @@
         height: 35px;
     }
 
-    .formulaire .bouton{
-        background-image: url("search.png");
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 30px;
-        padding: 0;
-        box-shadow: none!important;
-    }
-
     .hot-container p {
         margin-top: 10px;
 
@@ -314,6 +305,13 @@
     }
 </style>
 <body style="overflow: hidden">
+<%
+    session = request.getSession(true);
+    System.out.println(session.getAttribute("login"));
+    if(session.getAttribute("login") == null){
+        response.sendRedirect("Authentification.jsp");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
@@ -330,20 +328,7 @@
                     <a href="Accueil.jsp" class="btn">Vue normale</a>
                 </p>
             </div>
-<%--            <div class="collapse navbar-collapse" id="navbarResponsive">--%>
-<%--                <ul class="navbar-nav ml-auto">--%>
-<%--                    <li class="nav-item active">--%>
-<%--                        <a class="nav-link" href="Accueil.jsp">Home--%>
-<%--                            <span class="sr-only">(current)</span>--%>
-<%--                        </a>--%>
-<%--                    </li>--%>
-<%--                    <li class="nav-item">--%>
-<%--                        <a class="nav-link" href="Infos.jsp">Informations pratiques</a>--%>
-<%--                    </li>--%>
 
-<%--                </ul>--%>
-
-<%--            </div>--%>
         </div>
 
         <div class="wrapper2">
@@ -364,19 +349,6 @@
             </nav>
         </div>
     </div>
-
-<%--    <ol class="breadcrumb" style="margin-right: 500px;padding-right: 500px">--%>
-<%--        <li><a href="Accueil.jsp">Accueil</a></li>--%>
-<%--        <li class="active">Page en cours</li>--%>
-<%--    </ol>--%>
-
-<%--    <div class="breadcrumb flat">--%>
-<%--        <a href="Accueil.jsp">Accueil</a>--%>
-<%--        <a href="#" class="active">Admin</a>--%>
-<%--        <a href="#">Ajouter un utilisateur</a>--%>
-<%--        <a href="#">Ajouter un clien</a>--%>
-<%--    </div>--%>
-
 
     <div>
         <form action="ControlerAddClient" id="formClient" class="form-style-9" onsubmit="return pop()" style="visibility: hidden">
@@ -462,6 +434,9 @@
         </thead>
         <tbody>
         <%
+            /**
+             * Affiche la liste des utilisateurs sous forme de table
+             */
             try(Connection con = new DS().getConnection()){
                 String query = "SELECT * FROM utilisateur";
                 PreparedStatement ps = con.prepareStatement(query);
@@ -567,24 +542,36 @@
 
 <script>
     function addForm() {
+        /**
+         * Redirige vers le formulaire d'ajout de client
+         */
         event.preventDefault();
         document.location.href="AjoutClient.jsp";
     }
 </script>
 <script>
     function addUser() {
+        /**
+         * Redirige vers le formulaire d'ajout d'utilisateur
+         */
         event.preventDefault();
         document.location.href = "SignUp.jsp"
     }
 </script>
 <script>
     function render() {
+        /**
+         * Affiche le formulaire de modification d'un utilisateur
+         */
         event.preventDefault();
         document.location.href="UpdateForm.jsp";
     }
 </script>
 <script>
     function pop() {
+        /**
+         * Pop-up Ajout client
+         */
         alert('Le client à bien été crée');
     }
 </script>
@@ -604,12 +591,26 @@
         document.getElementById('abc').style.display = "block";
     }
 </script>
+
+
 <script>
     function del2(log){
-        document.location.href = "Delete.jsp?log="+log;
+        /**
+         * Supprime un utilisateur dans la BDD
+         */
+        event.preventDefault();
+        if(confirm("Voulez-vous vraiment supprimer " + log + " ?")){
+            document.location.href = "Delete.jsp?log="+log;
+        }else{
+
+        }
     }
 </script>
+
 <script>
+    /**
+     * Animation Intitulé
+     */
 // Wrap every letter in a span
 $('.ml1 .letters').each(function(){
 $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));

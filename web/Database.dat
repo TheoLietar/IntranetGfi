@@ -1,0 +1,3018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root type="database" name="New database" expanded="True">
+	<container type="folder" name="Devices" expanded="True">	
+	<container type="folder" name="A10" expanded="True">	
+		<connection type="PuTTY" name="slb-croix-a - 192.168.125.32">
+			<name>slb-croix-a - 192.168.125.32</name>
+			<protocol>SSH</protocol>
+			<host>slb-croix-a</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>enable</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="slb-marcq-a - 192.168.125.33">
+			<name>slb-marcq-a - 192.168.125.33</name>
+			<protocol>SSH</protocol>
+			<host>slb-marcq-a</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>enable</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="slb-mgt - 192.168.125.36">
+			<name>slb-mgt - 192.168.125.36</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.36</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>enable</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="CAINTERNET (N3K)" expanded="False">	
+		<connection type="PuTTY" name="10.2.21.4 - CAINTERNET41F02A">
+			<name>10.2.21.4 - CAINTERNET41F02A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.4</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.5  - CAINTERNET41F02B">
+			<name>10.2.21.5  - CAINTERNET41F02B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.5</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.4 - CAINTERNET42E03B">
+			<name>10.2.22.4 - CAINTERNET42E03B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.4</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.5 - CAINTERNET42E03A">
+			<name>10.2.22.5 - CAINTERNET42E03A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.5</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.4 - CAWAN701DC1">
+			<name>10.2.23.4 - CAWAN701DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.4</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.5- CAWAN603DC1">
+			<name>10.2.23.5- CAWAN603DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.5</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="CHASSIS DELL" expanded="False">	
+		<connection type="PuTTY" name="cha011mxl1">
+			<name>cha011mxl1</name>
+			<protocol>SSH</protocol>
+			<host>cha011mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha011mxl2">
+			<name>cha011mxl2</name>
+			<protocol>SSH</protocol>
+			<host>cha011mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha012mxl1">
+			<name>cha012mxl1</name>
+			<protocol>SSH</protocol>
+			<host>cha012mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha012mxl2">
+			<name>cha012mxl2</name>
+			<protocol>SSH</protocol>
+			<host>cha012mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha013mxl1">
+			<name>cha013mxl1</name>
+			<protocol>SSH</protocol>
+			<host>cha013mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha013mxl2">
+			<name>cha013mxl2</name>
+			<protocol>SSH</protocol>
+			<host>cha013mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha014mxl1">
+			<name>cha014mxl1</name>
+			<protocol>SSH</protocol>
+			<host>cha014mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="cha014mxl2">
+			<name>cha014mxl2</name>
+			<protocol>SSH</protocol>
+			<host>cha014mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs011mxl1">
+			<name>chs011mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs011mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs011mxl2">
+			<name>chs011mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs011mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs012mxl1">
+			<name>chs012mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs012mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs012mxl2">
+			<name>chs012mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs012mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs013mxl1">
+			<name>chs013mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs013mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs013mxl2">
+			<name>chs013mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs013mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs014mxl1">
+			<name>chs014mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs014mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs014mxl2">
+			<name>chs014mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs014mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs015mxl1">
+			<name>chs015mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs015mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs015mxl2">
+			<name>chs015mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs015mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs016mxl1">
+			<name>chs016mxl1</name>
+			<protocol>SSH</protocol>
+			<host>chs016mxl1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="chs016mxl2">
+			<name>chs016mxl2</name>
+			<protocol>SSH</protocol>
+			<host>chs016mxl2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>calvin</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Cisco - 3750" expanded="False">	
+		<connection type="PuTTY" name="10.2.21.30 - CALAN41F09A">
+			<name>10.2.21.30 - CALAN41F09A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.30</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.30 - CALAN42E07A">
+			<name>10.2.22.30 - CALAN42E07A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.30</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.30 - CALAN01602A">
+			<name>10.2.23.30 - CALAN01602A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.30</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Cisco - CISCO 7010" expanded="False">	
+	<container type="folder" name="1 - VDC - LAN" expanded="True">	
+		<connection type="PuTTY" name="10.2.21.6 - CCLAN41DC1">
+			<name>10.2.21.6 - CCLAN41DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.6</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.6 - CCLAN42DC2">
+			<name>10.2.22.6 - CCLAN42DC2</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.6</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.6 - CCLANEQDC1">
+			<name>10.2.23.6 - CCLANEQDC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.6</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CCheb01R703">
+			<name>CCheb01R703</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.51</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>switchto vdc CCheb42E08</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CCheb41F10">
+			<name>CCheb41F10</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.6</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>switchto vdc CCheb41F10</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CCheb42E08">
+			<name>CCheb42E08</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.6</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>switchto vdc CCheb42E08</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="2 - VDC-DMZ" expanded="True">	
+		<connection type="PuTTY" name="10.2.21.3 - CCDMZ41DC1">
+			<name>10.2.21.3 - CCDMZ41DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.3</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.3 - CCDMZ42DC2">
+			<name>10.2.22.3 - CCDMZ42DC2</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.3</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.3 - CCDMZEQDC1">
+			<name>10.2.23.3 - CCDMZEQDC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.3</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="3 - VDC - HEB - no access" expanded="True">	
+		<connection type="PuTTY" name="10.2.21.51 - CCHEB41F10 - DC41">
+			<name>10.2.21.51 - CCHEB41F10 - DC41</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.51</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.51 - CCHEB42E08 - DC42">
+			<name>10.2.22.51 - CCHEB42E08 - DC42</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.51</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.51 - CCheb01R703 - DC1">
+			<name>10.2.23.51 - CCheb01R703 - DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.51</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="4 - VDC - OTV - no access" expanded="True">	
+		<connection type="PuTTY" name="10.2.21.50 - CCOTV41DC1">
+			<name>10.2.21.50 - CCOTV41DC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.50</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.50 - CCOTV42DC2">
+			<name>10.2.22.50 - CCOTV42DC2</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.50</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.50 - CCOTVEQDC1">
+			<name>10.2.23.50 - CCOTVEQDC1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.50</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="Cisco - NEXUS 5020" expanded="False">	
+	<container type="folder" name="DMZ" expanded="False">	
+	<container type="folder" name="DC1" expanded="True">	
+		<connection type="PuTTY" name="10.2.23.13 - CDDMZ502A">
+			<name>10.2.23.13 - CDDMZ502A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.13</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.14 - CDDMZ503B">
+			<name>10.2.23.14 - CDDMZ503B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.14</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="DC41" expanded="True">	
+		<connection type="PuTTY" name="10.2.21.15 - CDDMZ41G10A">
+			<name>10.2.21.15 - CDDMZ41G10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.15</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.16 - CDDMZ41G09B">
+			<name>10.2.21.16 - CDDMZ41G09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.16</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.23 - CDDMZ41H10A">
+			<name>10.2.21.23 - CDDMZ41H10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.23</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.24 - CDDMZ41H09B">
+			<name>10.2.21.24 - CDDMZ41H09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.24</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="DC42" expanded="True">	
+		<connection type="PuTTY" name="10.2.22.15 - CDDMZ42F08A">
+			<name>10.2.22.15 - CDDMZ42F08A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.15</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.16 - CDDMZ42F10B">
+			<name>10.2.22.16 - CDDMZ42F10B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.16</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="LAN" expanded="False">	
+	<container type="folder" name="DC1" expanded="False">	
+		<connection type="PuTTY" name="10.2.23.11 - CDLAN502A">
+			<name>10.2.23.11 - CDLAN502A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.11</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.12 - CDLAN503B">
+			<name>10.2.23.12 - CDLAN503B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.12</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.52 - CDHEB502A">
+			<name>10.2.23.52 - CDHEB502A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.52</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.53 - CDHEB503B">
+			<name>10.2.23.53 - CDHEB503B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.53</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.54 - CDHEB702A">
+			<name>10.2.23.54 - CDHEB702A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.54</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.23.55 - CDHEB702B">
+			<name>10.2.23.55 - CDHEB702B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.23.55</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="DC41" expanded="False">	
+		<connection type="PuTTY" name="10.2.21.11 - CDLAN41G10A">
+			<name>10.2.21.11 - CDLAN41G10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.11</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.12 - CDLAN41G09B">
+			<name>10.2.21.12 - CDLAN41G09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.12</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.13 - CDLAN41G10C">
+			<name>10.2.21.13 - CDLAN41G10C</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.13</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>CHA11/CHA13		</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.14 - CDLAN41G09D">
+			<name>10.2.21.14 - CDLAN41G09D</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.14</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>CHA11/CHA13</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.21 - CDLAN41H10A">
+			<name>10.2.21.21 - CDLAN41H10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.21</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.22 - CDLAN41H09B">
+			<name>10.2.21.22 - CDLAN41H09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.22</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.25 - CDLAN41I10A">
+			<name>10.2.21.25 - CDLAN41I10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.25</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.26 - CDLAN41I09B">
+			<name>10.2.21.26 - CDLAN41I09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.26</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.27 - CDLAN41J10A">
+			<name>10.2.21.27 - CDLAN41J10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.27</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.28 - CDLAN41J09B">
+			<name>10.2.21.28 - CDLAN41J09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.28</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="DC42" expanded="False">	
+		<connection type="PuTTY" name="10.2.22.11 - CDLAN42F08A">
+			<name>10.2.22.11 - CDLAN42F08A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.11</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.12 - CDLAN42F10B">
+			<name>10.2.22.12 - CDLAN42F10B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.12</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.52 - CDheb42G06A">
+			<name>10.2.22.52 - CDheb42G06A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.52</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.53 - CDheb42G08B">
+			<name>10.2.22.53 - CDheb42G08B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.53</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="NFS" expanded="False">	
+	<container type="folder" name="DC41" expanded="False">	
+		<connection type="PuTTY" name="10.2.21.17 - CDNFS41G10A">
+			<name>10.2.21.17 - CDNFS41G10A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.17</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.18 - CDNFS41G09B">
+			<name>10.2.21.18 - CDNFS41G09B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.18</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.19 - CDNFS41G10C">
+			<name>10.2.21.19 - CDNFS41G10C</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.19</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.20 - CDNFS41G09D">
+			<name>10.2.21.20 - CDNFS41G09D</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.20</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="DC42" expanded="False">	
+		<connection type="PuTTY" name="10.2.22.17 - CDNFS42F08A">
+			<name>10.2.22.17 - CDNFS42F08A</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.17</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.22.18 - CDNFS42F10B">
+			<name>10.2.22.18 - CDNFS42F10B</name>
+			<protocol>SSH</protocol>
+			<host>10.2.22.18</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	</container>
+	<container type="folder" name="CKP" expanded="False">	
+		<connection type="PuTTY" name="192.168.125.43 - FW-PRI-CROIX">
+			<name>192.168.125.43 - FW-PRI-CROIX</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.43</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>ip route get
+tcpdump -i bond2.852 net 172.18.206.128/26
+chaprob state</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>expert</command1>
+			<command2>CraSSuS#ToHiM3</command2>
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="192.168.125.44 - FW-PRI-MARCQ">
+			<name>192.168.125.44 - FW-PRI-MARCQ</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.44</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>expert</command1>
+			<command2>CraSSuS#ToHiM3</command2>
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="fw-pri-mgt">
+			<name>fw-pri-mgt</name>
+			<protocol>SSH</protocol>
+			<host>fw-pri-mgt</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>sfFPBAULQfTF3f</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>expert</command1>
+			<command2>CraSSuS#ToHiM3</command2>
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="F5" expanded="False">	
+	<container type="folder" name="LAN" expanded="True">	
+		<connection type="PuTTY" name="192.168.125.27 - lb-lan-croix.si3si.int">
+			<name>192.168.125.27 - lb-lan-croix.si3si.int</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.27</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="192.168.125.28 - lb-lan-marcq.si3si.int">
+			<name>192.168.125.28 - lb-lan-marcq.si3si.int</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.28</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="LLB" expanded="True">	
+		<connection type="PuTTY" name="192.168.125.37 - LLB - Croix">
+			<name>192.168.125.37 - LLB - Croix</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.37</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="192.168.125.38 - LLB - Marcq">
+			<name>192.168.125.38 - LLB - Marcq</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.38</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>BauSsDeSNAtte$</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="JUNIPER" expanded="False">	
+	<container type="folder" name="BIZ" expanded="True">	
+		<connection type="PuTTY" name="192.168.125.10 - FW-BIZ-A">
+			<name>192.168.125.10 - FW-BIZ-A</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.10</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>PluTARK&amp;ndMark</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="192.168.125.11 - FW-BIZ-B">
+			<name>192.168.125.11 - FW-BIZ-B</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.11</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>PluTARK&amp;ndMark</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="192.168.125.5 - NSM Express">
+			<name>192.168.125.5 - NSM Express</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.5</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>RuleZT8JeUHnes</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>N</command1>
+			<command2>sudo su -</command2>
+			<command3>RuleZT8JeUHnes</command3>
+			<command4>/etc/init.d/guiSvr status</command4>
+			<command5>/etc/init.d/devSvr status</command5>
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="MEZZO" expanded="True">	
+		<connection type="PuTTY" name="172.29.1.23 - FW-MEZZO-DC1">
+			<name>172.29.1.23 - FW-MEZZO-DC1</name>
+			<protocol>SSH</protocol>
+			<host>172.29.1.23</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>Hir@PikaBollum</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername>admin</ftpusername>
+			<ftppassword />
+			<sftpusername>admin</sftpusername>
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="172.29.1.24 - FW-MEZZO-DC2">
+			<name>172.29.1.24 - FW-MEZZO-DC2</name>
+			<protocol>SSH</protocol>
+			<host>172.29.1.24</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>ZaHi@AndTrolls</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="New Folder" expanded="True">	
+		<connection type="PuTTY" name="192.168.125.49">
+			<name>192.168.125.49</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.49</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="VPN IPSEC - SSG350M" expanded="True">	
+		<connection type="PuTTY" name="Actif - 192.168.125.22 - fw-vpn-b">
+			<name>Actif - 192.168.125.22 - fw-vpn-b</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.22</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>PluTARK&amp;ndMark</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="Passif - 192.168.125.23 - fw-vpn-a">
+			<name>Passif - 192.168.125.23 - fw-vpn-a</name>
+			<protocol>SSH</protocol>
+			<host>192.168.125.23</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>PluTARK&amp;ndMark</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+		<connection type="PuTTY" name="10.2.21.40 -  SRX5400">
+			<name>10.2.21.40 -  SRX5400</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.40</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>gfi-srx-2018</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Lan2Lan - MAN SFR" expanded="False">	
+	<container type="folder" name="3SUISSES Univers Cité/Livelle/Witt/Helline/Groupe 3SI-3SI Holding" expanded="False">	
+		<connection type="PuTTY" name="CBjaures245A - 172.20.128.10">
+			<name>CBjaures245A - 172.20.128.10</name>
+			<protocol>Telnet</protocol>
+			<host>172.20.128.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="BLANCHE PORTE" expanded="False">	
+	<container type="folder" name="Auster" expanded="True">	
+		<connection type="PuTTY" name="CBauster1A - 172.24.160.7">
+			<name>CBauster1A - 172.24.160.7</name>
+			<protocol>Telnet</protocol>
+			<host>172.24.160.7</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="FW-Auster">
+			<name>FW-Auster</name>
+			<protocol>SSH</protocol>
+			<host>172.24.160.10</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>6000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1>cli</command1>
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>True</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="DISPEO" expanded="False">	
+	<container type="folder" name="Hem" expanded="True">	
+		<connection type="PuTTY" name="CBDPHemA - 172.24.224.10">
+			<name>CBDPHemA - 172.24.224.10</name>
+			<protocol>Telnet</protocol>
+			<host>172.24.224.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CBhemlt1A - 172.26.0.11">
+			<name>CBhemlt1A - 172.26.0.11</name>
+			<protocol>Telnet</protocol>
+			<host>172.26.0.11</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CBhemlt2A - 172.26.0.12">
+			<name>CBhemlt2A - 172.26.0.12</name>
+			<protocol>Telnet</protocol>
+			<host>172.26.0.12</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="fw-hem-lt1">
+			<name>fw-hem-lt1</name>
+			<protocol>SSH</protocol>
+			<host>fw-hem-lt1</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>juniper100</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="fw-hem-lt2">
+			<name>fw-hem-lt2</name>
+			<protocol>SSH</protocol>
+			<host>fw-hem-lt2</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>juniper100</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Houplines" expanded="True">	
+		<connection type="PuTTY" name="CBhouplinesA - 172.20.96.10 - lbck : 172.18.169.204">
+			<name>CBhouplinesA - 172.20.96.10 - lbck : 172.18.169.204</name>
+			<protocol>Telnet</protocol>
+			<host>172.20.96.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Templemars" expanded="True">	
+		<connection type="PuTTY" name="CBTemplemarsA - 172.20.80.10 - lbck : 172.18.169.203">
+			<name>CBTemplemarsA - 172.20.80.10 - lbck : 172.18.169.203</name>
+			<protocol>Telnet</protocol>
+			<host>172.20.80.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Toufflers" expanded="True">	
+		<connection type="PuTTY" name="CBtoufflersA - 172.20.32.10 - lbck : 172.18.169.202">
+			<name>CBtoufflersA - 172.20.32.10 - lbck : 172.18.169.202</name>
+			<protocol>Telnet</protocol>
+			<host>172.20.32.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="GFI - Lille" expanded="False">	
+		<connection type="PuTTY" name="CBL2LLILA - lpck : 172.18.169.80">
+			<name>CBL2LLILA - lpck : 172.18.169.80</name>
+			<protocol>Telnet</protocol>
+			<host>172.18.169.80</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CBlille234A.si3si.int - 172.23.160.10 - lbck : 172.18.169.201">
+			<name>CBlille234A.si3si.int - 172.23.160.10 - lbck : 172.18.169.201</name>
+			<protocol>Telnet</protocol>
+			<host>172.23.160.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="UNIGRO" expanded="False">	
+		<connection type="PuTTY" name="CBunigroA - 172.23.64.10">
+			<name>CBunigroA - 172.23.64.10</name>
+			<protocol>Telnet</protocol>
+			<host>172.23.64.10</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	<container type="folder" name="Via SRX MEZZO via SENIOR OBS" expanded="False">	
+		<connection type="PuTTY" name="CBbreuilA - 10.201.88.3">
+			<name>CBbreuilA - 10.201.88.3</name>
+			<protocol>Telnet</protocol>
+			<host>10.201.88.3</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="CBstouenA - 10.201.88.2">
+			<name>CBstouenA - 10.201.88.2</name>
+			<protocol>Telnet</protocol>
+			<host>10.201.88.2</host>
+			<port>23</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login />
+			<password />
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="Mezzo" expanded="False">	
+		<connection type="PuTTY" name="10.2.21.227 - CALAN41F04A-MEZZO-1">
+			<name>10.2.21.227 - CALAN41F04A-MEZZO-1</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.227</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>admin</login>
+			<password>SpARt@KuSS4YoU</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="10.2.21.227 - CALAN41F04A-MEZZO-1(2)">
+			<name>10.2.21.227 - CALAN41F04A-MEZZO-1(2)</name>
+			<protocol>SSH</protocol>
+			<host>10.2.21.227</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>sefiey.rad</login>
+			<password>toto</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+	<container type="folder" name="Server" expanded="True">	
+	<container type="folder" name="Radius-Rancid" expanded="True">	
+		<connection type="PuTTY" name="FreeRadius-a (VL067805)">
+			<name>FreeRadius-a (VL067805)</name>
+			<protocol>SSH</protocol>
+			<host>10.2.20.93</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>Serveur Free-Radius + RANCID</description>
+			<login>root</login>
+			<password>WzbK3NpY</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+		<connection type="PuTTY" name="FreeRadius-b (VL067806)">
+			<name>FreeRadius-b (VL067806)</name>
+			<protocol>SSH</protocol>
+			<host>10.2.20.94</host>
+			<port>22</port>
+			<session>Default Settings</session>
+			<description>
+			</description>
+			<login>root</login>
+			<password>v6pXwGEG</password>
+			<connectiontimeout>1500</connectiontimeout>
+			<logintimeout>1000</logintimeout>
+			<passwordtimeout>1000</passwordtimeout>
+			<commandtimeout>1000</commandtimeout>
+			<command1 />
+			<command2 />
+			<command3 />
+			<command4 />
+			<command5 />
+			<postcommands>False</postcommands>
+			<ftpusername />
+			<ftppassword />
+			<sftpusername />
+			<sftppassword />
+	</connection>
+	</container>
+	</container>
+</root>

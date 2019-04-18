@@ -48,6 +48,7 @@
     .contain{
         position: relative;
     }
+
     body {
         background-color: whitesmoke;
         min-height: 100%;
@@ -195,7 +196,6 @@
     }
 
     .formulaire .bouton {
-        background-image: url("search.png");
         background-repeat: no-repeat;
         width: 35px;
         height: 30px;
@@ -257,30 +257,6 @@
         box-sizing: border-box;
     }
 
-    #ulTop {
-        animation: none !important;
-        animation-duration: 0s !important;
-        animation-timing-function: ease !important;
-        animation-delay: 0s !important;
-        animation-iteration-count: 1 !important;
-        animation-direction: normal !important;
-        animation-fill-mode: none !important;
-        animation-play-state: running !important;
-        animation-name: none !important;
-        z-index: 99;
-        opacity: 1;
-        list-style: none;
-    }
-
-    #ulTop li {
-        display: inline-block;
-        padding-right: 22px;
-        font-size: 14px;
-        word-wrap: break-word;
-        position: relative;
-        line-height: 1em;
-        text-align: -webkit-match-parent;
-    }
 
     .menu-item-has-children > a:first-child {
         padding-right: 220px;
@@ -289,13 +265,13 @@
     .menu-item-has-children a {
         padding-bottom: -50px;
         padding-top: 20px;
-        font-size: 1.2em;
+        font-size: 1.1em;
         font-weight: bold;
         font-style: normal;
         text-transform: none;
         text-decoration: none;
         color: #1a1c40;
-        display: block;
+        display: inline-block;
         position: relative;
         margin: 0;
         border: 0;
@@ -434,10 +410,25 @@
         text-decoration: none;
     }
 
+    .navbar-brand{
+        padding-left: -30px;
+        left: 0;
+    }
+
+    .navbar{
+        left: 0;
+    }
 
 </style>
 
 <body id="body">
+<%
+    session = request.getSession(true);
+    System.out.println(session.getAttribute("login"));
+    if(session.getAttribute("login") == null){
+        response.sendRedirect("Authentification.jsp");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
@@ -456,6 +447,12 @@
                     <li id="adminbtn" class="menu-item menu-item-has-children"><a href="Admin.jsp"
                                                                                   class="hvr-float cta">Vue
                         Admin</a></li>
+                    <li id="liens" class="menu-item menu-item-has-children">
+                        <a href="Liens.jsp" class="hvr-float">Liens Utiles</a>
+                    </li>
+                    <li id="putty" class="menu-item menu-item-has-children">
+                        <a href="Putty.jsp" class="hvr-float">Putty</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -507,34 +504,6 @@
     %>
     <br>
 
-<%--    <div class="wrapperGrid">--%>
-<%--        <%--%>
-<%--            try (Connection con = new DS().getConnection()) {--%>
-<%--                String query = "SELECT * FROM client";--%>
-<%--                PreparedStatement ps = con.prepareStatement(query);--%>
-<%--                ResultSet rs = ps.executeQuery();--%>
-<%--                ResultSetMetaData rsmd = rs.getMetaData();--%>
-
-<%--                while (rs.next()) {--%>
-<%--                    System.out.println(rs.getString(8));--%>
-<%--                    out.write("<div class=\"box\" style=\"background: url(" + rs.getString(8) + ")\"><p class=\"boxp\">" + rs.getString(2) + "</p>");--%>
-
-<%--                    out.write("<div class=\"niveau2\">");--%>
-<%--                    out.write("<ul>");--%>
-<%--                    out.write("<li><a href=\"" + rs.getString(3) + "\">Confluence</a></li>");--%>
-<%--                    out.write("<li><a href=\"" + rs.getString(4) + "\">Ticketting</a></li>");--%>
-<%--                    out.write("<li><a href=\"" + rs.getString(5) + "\">SLA</a></li>");--%>
-<%--                    out.write("<li><a href=\"" + rs.getString(6) + "\">Contact</a></li>");--%>
-<%--                    out.write("<li><a href=\"" + rs.getString(7) + "\">Plage service</a></li>");--%>
-<%--                    out.write("</ul>");--%>
-<%--                    out.write("</div>");--%>
-<%--                    out.write("</div>");--%>
-
-<%--                }--%>
-<%--            }--%>
-<%--        %>--%>
-<%--    </div>--%>
-
     <div class="ap-container-1 ap-container-wrap">
         <div class="ap-container">
             <div class="smls-main-logo-outer-838031243 smls-main-logo-wrapper smls-resposive-wrap" data-logo-type="without_filter">
@@ -558,11 +527,11 @@
                                 out.write("<div class=\"smls-list-title\">"+ rs.getString(2) + "</div>");
                                 out.write("<div class=\"smls-list-description\">");
                                 out.write("<ul>");
-                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(3) + "\">Confluence</a></li>");
-                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(4) + "\">Ticketting</a></li>");
-                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(5) + "\">SLA</a></li>");
-                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(6) + "\">Contact</a></li>");
-                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(7) + "\">Plage service</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(3) + "\" target=\"_new\">Confluence</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(4) + "\" target=\"_new\">Ticketting</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(5) + "\" target=\"_new\">SLA</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(6) + "\" target=\"_new\">Contact</a></li>");
+                                out.write("<li><a class=\"hvr-float\" href=\"" + rs.getString(7) + "\" target=\"_new\">Plage service</a></li>");
                                 out.write("</ul>");
                                 out.write("</div>");
                                 out.write("</div>");
