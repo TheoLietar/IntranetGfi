@@ -1,0 +1,95 @@
+No.,Serial,Description,Hardware,Version,Contact,Location,"Uptime (second)"
+cdheb702a,SSI144200DL,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5548,5.2(1)N1(9a),who@where,19,13799376
+cdheb702b,SSI1442000J,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5548,5.2(1)N1(9a),who@where,19,24511680
+fw-biz-croix,AB3809AA0045,"Juniper Networks, Inc. srx3600 internet router, kernel JUNOS 11.4R10.4 #0: 2013-12-17 23:15:46 UTC     builder@singlath:/volume/build/junos/11.4/release/11.4R10.4/obj-powerpc/bsd/kernels/JUNIPER-SRX/kernel Build date: 2013-12-17 22:51:53 UTC Copyright (c","node1 Juniper SRX 3600 services gateway",11.4R10.4,,1,34525928
+fw-biz-marcq,,"Juniper Networks, Inc. srx3600 internet router, kernel JUNOS 11.4R10.4 #0: 2013-12-17 23:15:46 UTC     builder@singlath:/volume/build/junos/11.4/release/11.4R10.4/obj-powerpc/bsd/kernels/JUNIPER-SRX/kernel Build date: 2013-12-17 22:51:53 UTC Copyright (c","Juniper SRX3600",11.4R10.4,,1,35559973
+fw-pri-croix,R201312001174,"Linux fw-pri-croix 2.6.18-92cpx86_64 #1 SMP Sun Dec 15 19:25:11 IST 2013 x86_64","Check Point 13500",R77.10,"3SI Btoc",2,34545274
+fw-pri-mgt,,"Linux fw-pri-mgt 2.6.18-92cp #1 SMP Sun Dec 15 18:26:07 IST 2013 i686","Smart-1 25",R77.10,"3SI Btoc",2,27439467
+fw-vpn-a,JN12378B5ADE,"SSG-350M version 6.3.0r16a.0 (SN: JN12378B5ADE, Firewall+VPN)",SSG-350M,6.3.0r16a.0,,4,13866276
+fw-vpn-b,JN1237E45ADE,"SSG-350M version 6.3.0r16a.0 (SN: JN1237E45ADE, Firewall+VPN)",SSG-350M,6.3.0r16a.0,,2,56766024
+fwmezzo-dc1,BH0512AA0004,"Juniper Networks, Inc. srx1400 internet router, kernel JUNOS 12.1X46-D35.1 #0: 2015-05-14 23:47:27 UTC     builder@dagmath.juniper.net:/volume/build/junos/12.1/service/12.1X46-D35.1/obj-powerpc/junos/bsd/kernels/JUNIPER-SRX/kernel Build date: 2015-05-15","node1 Juniper SRX 1400 services gateway",12.1X46-D35.1,,31,4801136
+vpnssl-a,,"Juniper Networks,Inc,MAG-SM160,8.0R8.1 (build 33771)","Juniper MAG-SM160","8.0R8.1 (build 33771)",,29,76937602
+vpnssl-b,,"Juniper Networks,Inc,MAG-SM160,8.0R8.1 (build 33771)","Juniper MAG-SM160","8.0R8.1 (build 33771)",,29,35559758
+lb-lan-croix.si3si.int,f5-isad-juiw,"Linux lb-lan-croix.si3si.int 2.6.32-279.19.1.el6.f5.x86_64 #1 SMP Sun Feb 8 23:46:09 PST 2015 x86_64","BIG-IP 3600",11.5.1,"Customer Name <admin@customer.com>",9,77547364
+lb-lan-marcq.si3si.int,f5-kkfc-ojap,"Linux lb-lan-marcq.si3si.int 2.6.32-279.19.1.el6.f5.x86_64 #1 SMP Sun Feb 8 23:46:09 PST 2015 x86_64","BIG-IP 3600",11.5.1,"Customer Name <admin@customer.com>",9,35560057
+llb-croix.si3si.int,f5-ribn-lcde,"Linux llb-croix.si3si.int 2.6.32-358.23.2.el6.f5.x86_64 #1 SMP Thu Jun 18 16:24:51 PDT 2015 x86_64","BIG-IP 4000",11.6.0,"Customer Name <admin@customer.com>",9,66345730
+llb-marcq.si3si.int,f5-zknl-cxdf,"Linux llb-marcq.si3si.int 2.6.32-358.23.2.el6.f5.x86_64 #1 SMP Thu Jun 18 16:24:51 PDT 2015 x86_64","BIG-IP 4000",11.6.0,"Customer Name <admin@customer.com>",9,35560002
+slb-croix-a.si3si.int,TH30A73313480013,"Thunder Series Unified Application Service Gateway TH3030S, ACOS 2.7.1-GR1,",,N/A,"SI3SI - admin@si3si.int",3,13885536
+slb-marcq-a.si3si.int,TH30A63313430058,"Thunder Series Unified Application Service Gateway TH3030S, ACOS 2.7.1-GR1,",,N/A,"SI3SI - admin@si3si.int",3,13910945
+cainternet41f02a,FOC1618R0X2,"Cisco NX-OS(tm) nxos.7.0.3.I2.2d.bin, Software (nxos), Version 7.0(3)I2(2d), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 4/24/2016 12:00:00",N3K-C3064PQ-10GX,7.0(3)I2(2d),"Service Reseau / reseau_telecom@si3si.com",5,79747942
+cainternet41f02b,FOC1618R16X,"Cisco NX-OS(tm) nxos.7.0.3.I7.6.bin, Software (nxos), Version 7.0(3)I7(6), RELEASE SOFTWARE Copyright (c) 2002-2019 by Cisco Systems, Inc. Compiled 3/5/2019 12:00:00",N3K-C3064PQ-10GE,7.0(3)I7(6),"Service Reseau / reseau_telecom@si3si.com",5,1682434
+cainternet42e03a,FOC1601R0X5,"Cisco NX-OS(tm) nxos.7.0.3.I4.7.bin, Software (nxos), Version 7.0(3)I4(7), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 6/28/2017 13:00:00",N3K-C3064PQ-10GE,7.0(3)I4(7),"Service Reseau / reseau_telecom@si3si.com",5,34898376
+calan41f09a.si3si.int,FHK1143Z01N,"Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 12.2(55)SE11, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Wed 17-Aug-16 13:28 by prod_rel_team",WS-C3750-48PS-S,12.2(55)SE11,"Service Reseau / reseau_telecom@si3si.com",27,79830968
+calan42e07a.si3si.int,FDO1342X57S,"Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 12.2(55)SE11, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Wed 17-Aug-16 13:28 by prod_rel_team",WS-C3750-48PS-S,12.2(55)SE11,"Service Reseau / reseau_telecom@si3si.com",27,35560170
+calandc1602a.si3si.int,CAT1048ZK1W,"Cisco IOS Software, C3750 Software (C3750-IPSERVICESK9-M), Version 12.2(55)SE11, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Wed 17-Aug-16 13:28 by prod_rel_team",WS-C3750-48PS-S,12.2(55)SE11,"Service Reseau / reseau_telecom@si3si.com",27,24185929
+cawan603dc1,FOC1552R01G,"Cisco NX-OS(tm) nxos.7.0.3.I4.7.bin, Software (nxos), Version 7.0(3)I4(7), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 6/28/2017 13:00:00",N3K-C3064PQ-10GE,7.0(3)I4(7),"Service Reseau / reseau_telecom@si3si.com",21,34856114
+cawan701dc1,FOC1549R0ZF,"Cisco NX-OS(tm) nxos.7.0.3.I4.7.bin, Software (nxos), Version 7.0(3)I4(7), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 6/28/2017 13:00:00",N3K-C3064PQ-10GE,7.0(3)I4(7),"Service Reseau / reseau_telecom@si3si.com",21,34855669
+cblille234a.si3si.int,FDO1508Z14K,"Cisco IOS Software, C3750E Software (C3750E-UNIVERSALK9-M), Version 15.2(4)E4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2017 by Cisco Systems, Inc.
+Compiled Wed 05-Apr-17 04:22 by prod_rel_team",WS-C3750X-24T-S,15.2(4)E4,"Service Reseau / GD_ORG_LIL_RESEAU@gfi.fr",22,7612741
+ccdmz41dc1,JAF1424CEQP,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,79747564
+ccdmz42dc2,TBM14257373,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,35559743
+ccdmzeqdc1,JAF1427AFPJ,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,36010913
+cclan41dc1,JAF1424CEQP,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,79747890
+cclan42dc2,TBM14257373,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,35559790
+cclaneqdc1,JAF1427AFPJ,"Cisco NX-OS(tm) n7000, Software (n7000-s1-dk9), Version 6.2(16), RELEASE SOFTWARE Copyright (c) 2002-2013 by Cisco Systems, Inc. Compiled 1/27/2016 9:00:00","Nexus7000 C7010 (10 Slot)",6.2(16),"Service Reseau / reseau_telecom@si3si.com",21,36011100
+cddmz41g09b,SSI14281605,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798177
+cddmz41g10a,SSI1428125W,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798209
+cddmz41h09b,SSI1428126Y,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798206
+cddmz41h10a,SSI133905VF,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798143
+cddmz42f10b,SSI140101Q6,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35559409
+cddmz502a,SSI161207ZJ,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5020,5.2(1)N1(9a),"Service Reseau / reseau_telecom@si3si.com",5,30752716
+cddmz503b,SSI14190L9V,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5020,5.2(1)N1(9a),"Service Reseau / reseau_telecom@si3si.com",5,30752776
+cddmz42f08a,SSI14040GWV,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35558229
+cdheb503b,SSI150804WV,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5020,5.2(1)N1(9a),who@where,19,6987166
+cdlan41g09b,SSI14160R3D,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,13901813
+cdlan41g09d,SSI135101G6,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798448
+cdlan41g10a,SSI130205WX,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798443
+cdlan41g10c,SSI142815ZS,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798445
+cdlan41h09b,SSI1428125P,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798473
+cdlan41h10a,SSI1351055S,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36806105
+cdlan41i09b,SSI1428198V,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798927
+cdlan41i10a,SSI14270PYC,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,29830915
+cdlan41j09b,SSI130205YK,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798906
+cdlan41j10a,SSI14270A19,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798978
+cdlan42f08a,SSI1324033A,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35559046
+cdlan42f10b,SSI1352055P,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35559633
+cdlan502a,SSI15150AJ9,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5020,5.2(1)N1(9a),"Service Reseau / reseau_telecom@si3si.com",5,30755421
+cdlan503b,SSI14220LAF,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9a), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/7/2016 5:00:00",Nexus5020,5.2(1)N1(9a),"Service Reseau / reseau_telecom@si3si.com",5,30752087
+cdlille2343ba.si3si.int,FOC1634Y0MU,"Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.0(2)SE, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Sat 28-Jul-12 00:42 by prod_rel_team",WS-C2960S-F48LPS-L,15.0(2)SE,"Service Reseau / GD_ORG_LIL_RESEAU@gfi.fr",26,5099078
+cdlille2344ba.si3si.int,FOC1632Y3JZ,"Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.0(2)SE, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2012 by Cisco Systems, Inc.
+Compiled Sat 28-Jul-12 00:42 by prod_rel_team",WS-C2960S-F48LPS-L,15.0(2)SE,"Service Reseau / GD_ORG_LIL_RESEAU@gfi.fr",26,31879376
+cdlille234a.si3si.int,FOC1632Y3EZ,"Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Wed 10-Dec-14 03:54 by prod_rel_team",WS-C2960S-F48LPS-L,15.2(2a)E1,"Service Reseau / GD_ORG_LIL_RESEAU@gfi.fr",24,7612183
+cdlille234b.si3si.int,FOC1632Y3H8,"Cisco IOS Software, C2960S Software (C2960S-UNIVERSALK9-M), Version 15.2(2a)E1, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2014 by Cisco Systems, Inc.
+Compiled Wed 10-Dec-14 03:54 by prod_rel_team",WS-C2960S-F48LPS-L,15.2(2a)E1,"Service Reseau / GD_ORG_LIL_RESEAU@gfi.fr",26,7612166
+cdnfs41g09b,SSI13470FWY,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798215
+cdnfs41g09d,FLC12220532,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798274
+cdnfs41g10a,SSI142912SB,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798267
+cdnfs41g10c,SSI134907MP,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,36798275
+cdnfs42f08a,SSI140107NN,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35559330
+cdnfs42f10b,SSI140107NM,"Cisco NX-OS(tm) n5000, Software (n5000-uk9), Version 5.2(1)N1(9), RELEASE SOFTWARE Copyright (c) 2002-2011 by Cisco Systems, Inc. Device Manager Version 6.1(1),  Compiled 4/28/2015 7:00:00",Nexus5020,5.2(1)N1(9),"Service Reseau / reseau_telecom@si3si.com",5,35559653
+cwcroixa,,"Cisco Controller",AIR-CT8510-K9,8.0.152.0,,,3595151
+srx5400-dc41,JN1269626AGF,"Juniper Networks, Inc. srx5400 internet router, kernel JUNOS 18.2R1.9, Build date: 2018-06-28 04:23:52 UTC Copyright (c) 1996-2018 Juniper Networks, Inc.","node0 Juniper SRX5400 services gateway",18.2R1.9,,32,1665244
+ntpdc41a,,"Spectracom Product",,,si3si_ps_pole_reseau@si3si.com,30,74801760
+prdlmwgza,,"McAfee Web Gateway 7;WBG-5500-C;McAfee, Inc.",,,root@localhost,29,1219205
+prdlmwgzb,,"McAfee Web Gateway 7;WBG-5500-C;McAfee, Inc.",,,root@localhost,29,1218273

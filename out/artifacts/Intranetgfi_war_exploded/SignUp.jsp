@@ -104,7 +104,16 @@
 
 </style>
 <body>
+<%
+    /**
+     * Empêche l'accès direct en mode non connecté
+     */
+    session = request.getSession(true);
 
+    if(session.getAttribute("login") == null){
+        response.sendRedirect("Authentification.jsp");
+    }
+%>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
         <div class="container">
@@ -167,8 +176,10 @@
                         <div class="col-md-12 text-center ">
                             <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Allons y!!</button>
                         </div>
-
+                        <br>
                     </form>
+
+                    <br>
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                         <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
@@ -200,13 +211,16 @@
 
 
 </footer>
-
 </body>
 </html>
 
 <script>
+    /**
+     * Vérifie l'égalité des mots de passe et affiche si le mot de passe est incorrect
+     * @returns {boolean}
+     */
     function render() {
-        var login = document.querySelector("#login").value;
+        let login = document.querySelector("#login").value;
         console.log(document.querySelector("#password").value);
         console.log(document.querySelector("#password2").value);
         if(document.querySelector("#password").value !== document.querySelector("#password2").value) {
