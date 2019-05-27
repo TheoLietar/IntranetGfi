@@ -1,5 +1,8 @@
 package pojo;
 
+/**
+ * POJO contenant toutes les informations nécéssaires à un client
+ */
 public class Client {
     public String nom;
     public String confluence;

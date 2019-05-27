@@ -125,6 +125,9 @@
 </style>
 <body>
 <%
+    /**
+     * Vérification user connecté
+     */
     session = request.getSession(true);
     if(session.getAttribute("login") != null){
         response.sendRedirect("Accueil.jsp");
@@ -218,7 +221,11 @@
 </footer>
 </body>
 </html>
+
 <script>
+    /**
+     * Animation Intitulé
+     */
     $('.ml7 .letters').each(function () {
         $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
     });

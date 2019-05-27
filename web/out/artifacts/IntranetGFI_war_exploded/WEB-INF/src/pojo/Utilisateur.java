@@ -1,5 +1,8 @@
 package pojo;
 
+/**
+ * POJO contenant toutes les informations concernant un utilisateur
+ */
 public class Utilisateur {
     public String login;
     public String password;

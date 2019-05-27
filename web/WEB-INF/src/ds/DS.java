@@ -7,10 +7,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
+/**
+ * Classe permettant de faire la connection à la base de données
+ */
 public class DS {
 
 
-
+    /**
+     * Recupérer la connection à la base
+     * @return la connection à la BDD ou null si la BDD n'est pas trouvée.
+     * @throws FileNotFoundException
+     */
     public Connection getConnection() throws FileNotFoundException {
         //input = new FileInputStream("/home/theo/apache-tomcat-9.0.14/bin/basegfi.properties");
 

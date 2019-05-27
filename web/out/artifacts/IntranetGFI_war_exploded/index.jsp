@@ -9,6 +9,8 @@
 <html>
   <head>
     <title>$Title$</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script type="text/javascript" src="Fibre.js"></script>
   </head>
   <body>
   $END$

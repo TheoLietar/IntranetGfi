@@ -8,6 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/ControlerCalcIp")
+/**
+ * Controller pour l'outil de calculatrice IP
+ */
 public class ControlerCalcIp extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

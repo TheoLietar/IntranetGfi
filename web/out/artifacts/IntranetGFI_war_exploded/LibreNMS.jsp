@@ -1,14 +1,14 @@
 <%--suppress TooBroadScope --%>
 <%@ page import="java.nio.file.Path" %>
 <%@ page import="java.nio.file.Paths" %>
-<%@ page import="java.util.List" %>
 <%@ page import="java.nio.file.Files" %>
-<%@ page import="java.util.Arrays" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="java.io.FileReader" %>
 <%@ page import="java.io.BufferedReader" %>
 <%@ page import="java.io.IOException" %>
-<%@ page import="java.net.InetAddress" %>
+<%@ page import="java.net.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="controller.SnmpWalk"%>
+
 <%--
   Created by IntelliJ IDEA.
   User: theo.lietar-tmp
@@ -17,6 +17,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
     <meta http-equiv="refresh" content="600;url=LibreNMS.jsp">
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="hover.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js" defer></script>
 </head>
 <style>
 
@@ -180,119 +182,49 @@
         float: left;
         width: 400px;
         height: 440px;
-        border: 1px solid black;
+        box-shadow: 0px 0px 0px 4px ;
+        transition: box-shadow 0.6s linear;
         margin-left: 10px;
         padding-top: 55px;
         padding-left: 10px;
     }
 
-    #interoute {
-        width: 350px;
-        height: 100px;
-        border: 1px solid black;
-        border-radius: 5px;
-        margin-right: 700px;
-        margin-top: -50px;
-        float: right;
-        background-color: #001f3f;
+    .container-OSRE:hover{
+        box-shadow: 0px 0px 0px 8px black;
     }
 
-    #interoute:hover #downInteroute{
-        background-color: lightgray;
-        cursor: pointer;
-        display: block;
-    }
-
-    #downInteroute{
-        display: none;
-        border-radius: 5px;
+    .nav-dropdown{
         position: absolute;
-        background-color: lightgray;
-        margin-top: 100px;
-        min-width: 350px;
+        display: none;
+        z-index: 1;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+
+    li.dropdown-content{
+        display: inline-block;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: fixed;
+        background-color: #f9f9f9;
+        min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
     }
 
-    #downInteroute ul li {
-        text-decoration: none;
-        list-style-type: none;
-    }
-
-    #downInteroute ul li a{
-        text-align: center;
+    .dropdown-content a{
         color: black;
-        list-style-type: none;
+        padding: 12px 16px;
         text-decoration: none;
-        padding-left: 100px;
-    }
-
-    #interoute span {
-        position: absolute;
-        padding-left: 100px;
-        margin-top: 15px;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        line-height: 72px;
-        text-align: center;
-        text-transform: uppercase;
-
-    }
-
-    #zayo {
-        width: 350px;
-        height: 100px;
-        border: 1px solid black;
-        border-radius: 5px;
-        margin-right: 200px;
-        margin-top: -97px;
-        float: right;
-        background-color: #001f3f;
-    }
-
-    #zayo:hover #downZayo{
-        background-color: lightgray;
-        cursor: pointer;
         display: block;
+        text-align: left;
     }
 
-    #downZayo{
-        display: none;
-        border-radius: 5px;
-        position: absolute;
-        background-color: lightgray;
-        margin-top: 100px;
-        min-width: 350px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
+    .dropdown-content a:hover {background-color: #f1f1f1;}
 
-    #downZayo ul li {
-        text-decoration: none;
-        list-style-type: none;
-    }
-
-    #downZayo ul li a{
-        text-align: center;
-        color: black;
-        list-style-type: none;
-        text-decoration: none;
-        padding-left: 100px;
-    }
-
-    #zayo span {
-        position: absolute;
-        padding-left: 140px;
-        margin-top: 15px;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        font-size: 25px;
-        font-weight: 600;
-        line-height: 72px;
-        text-align: center;
-        text-transform: uppercase;
+    #srx:hover .dropdown-content {
+        display: block;
     }
 
 </style>
@@ -327,6 +259,13 @@
                     <li id="putty" class="menu-item menu-item-has-children">
                         <a href="Putty.jsp" class="hvr-float">Putty</a>
                     </li>
+                    <li id="srx" class="menu-item menu-item-has-children">
+                        <a href="javascript:void(0)" class="hvr-float">Réseaux</a>
+                        <div class="dropdown-content">
+                            <a href="Fibres.jsp">Fibres Noires</a>
+                            <a href="LibreNMS.jsp">Supervision</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
 
@@ -350,12 +289,12 @@
 <div class="container-OSRE">
 
     <div class="OSRE">
-        <div class="box" onclick="render('internet')" style="background:green">INTERNET</div>
+        <div class="box" onclick="render('internet')">INTERNET</div>
         <div class="box" onclick="render('3K')">3K</div>
         <div class="box" onclick="render('LLB')">LLB</div>
         <div class="box" onclick="render('5400')">5400</div>
         <div class="box" onclick="render('3600')">3600</div>
-        <div class="box" onclick="render('ssl')" style="background:green">SSL</div>
+        <div class="box" onclick="render('ssl')">SSL</div>
         <div class="box" onclick="render('ipsec')">IPSEC</div>
         <div class="box" onclick="render('dmz7k')">DMZ 7K</div>
         <div class="box" onclick="render('dmz5k')">DMZ 5K</div>
@@ -383,9 +322,9 @@
 
     BufferedReader br = new BufferedReader(fr);
 
-    String[] tab = new String[67];
-    String[] links = new String[67];
-    String[] etats = new String[67];
+    String[] tab = new String[69];
+    String[] links = new String[69];
+    String[] etats = new String[69];
 
     int idx = 0;
 
@@ -409,7 +348,11 @@
     lines.add(Arrays.asList("lb-lan-croix", "lb-lan-croix", "", "", "", "", "", "", "", "", "192.168.125.27", "", ""));
     lines.add(Arrays.asList("lb-lan-marcq", "lb-lan-marcq", "", "", "", "", "", "", "", "", "192.168.125.28", "", ""));
     lines.add(Arrays.asList("srx-10.2.23.43", "srx-10.2.23.43", "", "", "", "", "", "", "", "", "10.2.23.43", "", ""));
+    lines.add(Arrays.asList("vpnssl-a", "vpnssl-a", "", "", "", "", "", "", "", "", "192.168.125.48", "", ""));
+    lines.add(Arrays.asList("vpnssl-b", "vpnssl-b", "", "", "", "", "", "", "", "", "192.168.125.49", "", ""));
     lines.add(Arrays.asList("", "", "", "", "", "", "", "", "", "", "", "", ""));
+
+
 
 
     for (int i = 0; i < lines.size() - 1; i++) {
@@ -422,7 +365,6 @@
             } else {
                 links[idx] = lines.get(i).get(12);
             }
-
 
             //PING
             InetAddress inet = InetAddress.getByName(links[idx]);
@@ -580,7 +522,24 @@
     out.write("</div>");
 
     //SSL
-
+    out.write("<div class=\"wrapper\" id=\"ssl\" style=\"display : none\">");
+    for (int i = 0; i < tab.length; i++) {
+        if (tab[i].contains("vpnssl")) {
+            out.write("<a href=\"http://vl068360.hosting.gfi/device/device=" + links[i] + "\" target=\"_new\">");
+            out.write("<div class=\"sub-item\">");
+            out.write("<span class=\"label\">" + etats[i] + "</span>");
+            if (tab[i].contains("vpnssl")) {
+                out.write("<span class=\"device-icon\">");
+                out.write("<img src=\"pulse.png\">");
+                out.write("</span>");
+                out.write("<br>");
+            }
+            out.write("<span class=\"name\">" + tab[i] + "</span>");
+            out.write("</div>");
+            out.write("</a>");
+        }
+    }
+    out.write("</div>");
 
     //IPSEC
     out.write("<div class=\"wrapper\" id=\"ipsec\" style=\"display : none\">");
@@ -595,6 +554,7 @@
                 out.write("</span>");
                 out.write("<br>");
             }
+
             out.write("<span class=\"name\">" + tab[i] + "</span>");
             out.write("</div>");
             out.write("</a>");
@@ -798,7 +758,7 @@
     <%
     String session_val = (String) session.getAttribute("login");
 %>
-    var session_obj = '<%=session_val%>';
+    let session_obj = '<%=session_val%>';
 
     if (session_obj !== 'admin') {
         document.querySelector('#adminbtn').style.display = 'none';
@@ -807,343 +767,11 @@
     // alert(session_obj);
 </script>
 <script>
-    function render(chaine) {
-        event.preventDefault();
-
-        if (chaine === '3K') {
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('3K').style.display = 'block';
-        } else if (chaine === 'LLB') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('LLB').style.display = 'block';
-        } else if (chaine == '5400') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('5400').style.display = 'block';
-        } else if (chaine === '3600') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('3600').style.display = 'block';
-        } else if (chaine === 'ipsec') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'block';
-        } else if (chaine === 'dmz7k') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'block';
-        } else if (chaine === 'dmz5k') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none'
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'block';
-        } else if (chaine === 'a10') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('a10').style.display = 'block';
-        } else if (chaine === 'checkpoint') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'block';
-        } else if (chaine === 'lan7k') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'block';
-        } else if (chaine === 'lan5k') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'block';
-        } else if (chaine === 'lb') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('lb').style.display = 'block';
-        } else if (chaine == 'cw') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('cw').style.display = 'block';
-        } else if (chaine === 'nfs5k') {
-            document.getElementById('16').style.display = 'none';
-            document.getElementById('17').style.display = 'none';
-            document.getElementById('126').style.display = 'none';
-            document.getElementById('127').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('interoute').style.display = 'none';
-            document.getElementById('zayo').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'block';
-        } else if (chaine === 'internet') {
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('5400').style.display = 'none';
-            document.getElementById('3K').style.display = 'none';
-            document.getElementById('3600').style.display = 'none';
-            document.getElementById('ipsec').style.display = 'none';
-            document.getElementById('dmz7k').style.display = 'none';
-            document.getElementById('clientsGrid').style.display = 'none';
-            document.getElementById('LLB').style.display = 'none';
-            document.getElementById('dmz5k').style.display = 'none';
-            document.getElementById('a10').style.display = 'none';
-            document.getElementById('checkpoint').style.display = 'none';
-            document.getElementById('lan7k').style.display = 'none';
-            document.getElementById('lan5k').style.display = 'none';
-            document.getElementById('lb').style.display = 'none';
-            document.getElementById('cw').style.display = 'none';
-            document.getElementById('nfs5k').style.display = 'none';
-            document.getElementById('interoute').style.display = 'block';
-            document.getElementById('zayo').style.display = 'block';
-        }
-    }
-
     //3K
     for (let i = 1; i <= 6; i++) {
         if (document.querySelector("#\\33 K > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#\\33 K > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#\\33 K > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#\\33 K > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1159,6 +787,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#LLB > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#LLB > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#LLB > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#LLB > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1174,6 +803,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#\\35 400 > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#\\35 400 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#\\35 400 > a:nth-child(" + i + ") > div").style.border = '1px solid red';
         } else {
             document.querySelector("#\\35 400 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1190,6 +820,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#\\33 600 > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#\\33 600 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#\\33 600 > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#\\33 600 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1202,11 +833,27 @@
     }
 
     //SSL
+    for(let i=1;i<=2;i++){
+        if(document.querySelector("#ssl > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down'){
+            document.querySelector("#ssl > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#ssl > a:nth-child(" + i + ") > div").style.border = '1px solid red';
+        }else{
+            document.querySelector("#ssl > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
+        }
+    }
+
+    if ((document.querySelector("#ssl > a:nth-child(1) > div > span.label").innerHTML === 'up') && (document.querySelector("#ssl > a:nth-child(2) > div > span.label").innerHTML === 'up')) {
+        document.querySelector('body > div.container-OSRE > div > div:nth-child(6)').style.background = 'green';
+    } else {
+        document.querySelector('body > div.container-OSRE > div > div:nth-child(6)').style.background = 'red';
+    }
+
 
     //IPSEC
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#ipsec > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#ipsec > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#ipsec > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#ipsec > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1222,6 +869,7 @@
     for (let i = 1; i <= 3; i++) {
         if (document.querySelector("#dmz7k > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#dmz7k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#dmz7k > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#dmz7k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1237,6 +885,7 @@
     for (let i = 1; i <= 8; i++) {
         if (document.querySelector("#dmz5k > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#dmz5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#dmz5k > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#dmz5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1252,6 +901,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#a10 > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#a10 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#a10 > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#a10 > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1267,6 +917,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#checkpoint > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#checkpoint > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#checkpoint > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#checkpoint > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1282,6 +933,7 @@
     for (let i = 1; i <= 3; i++) {
         if (document.querySelector("#lan7k > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#lan7k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#lan7k > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#lan7k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1297,6 +949,7 @@
     for (let i = 1; i <= 14; i++) {
         if (document.querySelector("#lan5k > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#lan5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#lan5k > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#lan5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1312,6 +965,7 @@
     for (let i = 1; i <= 2; i++) {
         if (document.querySelector("#lb > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#lb > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#lb > a:nth-child(" + i + ") > div").style.border = 'red';
         } else {
             document.querySelector("#lb > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1327,6 +981,7 @@
     //CW
     if (document.querySelector("#cw > a > div > span.label").innerHTML === 'down') {
         document.querySelector("#cw > a > div > span.label").style.backgroundColor = 'red';
+        document.querySelector("#cw > a > div").style.border = 'red';
     } else {
         document.querySelector("#cw > a > div > span.label").style.backgroundColor = 'green';
     }
@@ -1341,6 +996,8 @@
     for (let i = 1; i <= 6; i++) {
         if (document.querySelector("#nfs5k > a:nth-child(" + i + ") > div > span.label").innerHTML === 'down') {
             document.querySelector("#nfs5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'red';
+            document.querySelector("#nfs5k > a:nth-child(" + i + ") > div").style.border = 'red';
+
         } else {
             document.querySelector("#nfs5k > a:nth-child(" + i + ") > div > span.label").style.backgroundColor = 'green';
         }
@@ -1350,6 +1007,87 @@
         document.querySelector('body > div.container-OSRE > div > div:nth-child(16)').style.background = 'green';
     } else {
         document.querySelector('body > div.container-OSRE > div > div:nth-child(16)').style.background = 'red';
+    }
+
+</script>
+<script>
+    <%
+    SnmpWalk snmp = new SnmpWalk();
+
+    //ZAYO
+    String port126 = snmp.getIfOperStatus("10.2.21.4",".1.3.6.1.2.1.2.2.1.8.436310016","GFI","161");
+    String status126 = port126.substring(35,port126.length()-1);
+
+    String inError126 = snmp.getIfOperStatus("10.2.21.4",".1.3.6.1.2.1.2.2.1.14.436310016","GFI","161");
+    String inerror126res = inError126.substring(36,inError126.length()-1);
+    if(inerror126res.contains("0") && inerror126res.length() <= 2){
+        inerror126res = "true";
+    }else{
+        inerror126res = "false";
+    }
+
+    String port127 = snmp.getIfOperStatus("10.2.21.4","1.3.6.1.2.1.2.2.1.8.436314112","GFI","161");
+    String status127 = port127.substring(35,port127.length()-1);
+
+     String inError127 = snmp.getIfOperStatus("10.2.21.4",".1.3.6.1.2.1.2.2.1.14.436314112","GFI","161");
+     String inerror127res = inError127.substring(36,inError127.length()-1);
+     if(inerror127res.contains("0") && inerror127res.length() <= 2){
+         inerror127res = "true";
+     }else{
+         inerror127res = "false";
+     }
+
+    //INTEROUTE4
+    String port16 = snmp.getIfOperStatus("10.2.21.5",".1.3.6.1.2.1.2.2.1.8.436228096","GFI","161");
+    String status16 = port16.substring(35,port16.length()-1);
+
+    String inError16 = snmp.getIfOperStatus("10.2.21.5",".1.3.6.1.2.1.2.2.1.14.436228096","GFI","161");
+    String inError16res = inError16.substring(36,inError16.length()-1);
+    if(inError16res.contains("0") && inError16res.length() <= 2){
+        inError16res = "true";
+    }else{
+        inError16res = "false";
+    }
+
+    String port17 = snmp.getIfOperStatus("10.2.21.5",".1.3.6.1.2.1.2.2.1.8.436232192","GFI","161");
+    String status17 = port17.substring(35,port17.length()-1);
+
+    String inError17 = snmp.getIfOperStatus("10.2.21.5",".1.3.6.1.2.1.2.2.1.14.436232192","GFI","161");
+    String inError17res = inError17.substring(36,inError17.length()-1);
+    if(inError17res.contains("0") && inError17res.length() <= 2){
+        inError17res = "true";
+    }else{
+        inError17res = "false";
+    }
+
+
+    %>
+
+    if(<%=status126.contains("1") && inerror126res.contains("true") && status127.contains("1") && inerror127res.contains("true")%>){
+        document.getElementById('zayo').style.backgroundColor = 'green';
+    }else{
+        if(<%=!status126.contains("1")%>){
+            alert("Interface Ethernet 1/26 status : down");
+        }else if(<%=!status127.contains("1")%>){
+            alert("Interface Ethernet 1/27 status : down");
+        }else if(<%=!inerror126res.contains("true")%>){
+            alert("Input error in Ethernet 1/26 : " + <%=inError126.substring(36,inError126.length()-1)%>)
+        }else{
+            alert("Input error in Ethernet 1/27 : " + <%=inError127.substring(36,inError127.length()-1)%>)
+        }
+        document.getElementById('zayo').style.backgroundColor = 'red';
+    }
+
+    if(<%=status16.contains("1") && inError16res.contains("true") && status17.contains("1") && inError17res.contains("true")%>){
+        document.getElementById('interoute').style.backgroundColor = 'green';
+    }else{
+        document.getElementById('interoute').style.backgroundColor = 'red';
+    }
+
+    if(document.getElementById('zayo').style.backgroundColor === 'red' || document.getElementById('interoute').style.backgroundColor === 'red'){
+        document.querySelector('body > div.container-OSRE > div > div:nth-child(1)').style.background = 'red';
+    }else{
+        document.querySelector('body > div.container-OSRE > div > div:nth-child(1)').style.background = 'green';
     }
 
 </script>

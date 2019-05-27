@@ -11,6 +11,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/ControlerAuthent")
+/**
+ * Controller pour l'authentification
+ */
 public class ControllerAuthent extends HttpServlet {
 
     @Override
@@ -24,7 +27,6 @@ public class ControllerAuthent extends HttpServlet {
 
 
         if(UserDAO.findByLogin(login) != null){
-            System.out.println("je suis rentré");
             if(UserDAO.findByLogin(login).getPassword().equals(password)){
                 HttpSession session = req.getSession(true);
                 session.setAttribute("login",login);

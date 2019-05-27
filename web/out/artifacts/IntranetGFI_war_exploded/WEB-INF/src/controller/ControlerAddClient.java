@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/ControlerAddClient")
+/**
+ * Controller pour le formulaire d'ajout de client
+ */
 public class ControlerAddClient extends HttpServlet {
 
     @Override

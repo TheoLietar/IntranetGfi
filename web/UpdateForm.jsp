@@ -208,14 +208,6 @@
         height: 35px;
     }
 
-    .formulaire .bouton{
-        background-image: url("search.png");
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 30px;
-        padding: 0;
-        box-shadow: none!important;
-    }
 
     .hot-container p {
         margin-top: 10px;

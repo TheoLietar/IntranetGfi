@@ -149,6 +149,13 @@
                         <li id="putty" class="menu-item menu-item-has-children">
                             <a href="Putty.jsp" class="hvr-float">Putty</a>
                         </li>
+                        <li id="srx" class="menu-item menu-item-has-children">
+                            <a href="javascript:void(0)" class="hvr-float">Réseaux</a>
+                            <div class="dropdown-content">
+                                <a href="Fibres.jsp">Fibres Noires</a>
+                                <a href="LibreNMS.jsp">Supervision</a>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
 
@@ -392,7 +399,7 @@
         $('#jstree')
         // listen for event
             .on('changed.jstree', function (e, data) {
-                var i, j, r = [];
+                let i, j, r = [];
                 for (i = 0, j = data.selected.length; i < j; i++) {
                     r.push(data.instance.get_node(data.selected[i]).text);
                 }
@@ -408,7 +415,7 @@
     %>
 
     <script type="text/javascript">
-        var session_obj = '<%=session_val%>';
+        let session_obj = '<%=session_val%>';
 
         if (session_obj !== 'admin') {
             document.querySelector('#adminbtn').style.display = 'none';

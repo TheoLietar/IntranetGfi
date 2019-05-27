@@ -78,7 +78,7 @@
 			<sftppassword />
 	</connection>
 	</container>
-	<container type="folder" name="CAINTERNET (N3K)" expanded="False">	
+	<container type="folder" name="CAINTERNET (N3K)" expanded="True">	
 		<connection type="PuTTY" name="10.2.21.4 - CAINTERNET41F02A">
 			<name>10.2.21.4 - CAINTERNET41F02A</name>
 			<protocol>SSH</protocol>
@@ -112,8 +112,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -809,7 +809,7 @@
 			<sftppassword />
 	</connection>
 	</container>
-	<container type="folder" name="Cisco - CISCO 7010" expanded="False">	
+	<container type="folder" name="Cisco - CISCO 7010" expanded="True">	
 	<container type="folder" name="1 - VDC - LAN" expanded="True">	
 		<connection type="PuTTY" name="10.2.21.6 - CCLAN41DC1">
 			<name>10.2.21.6 - CCLAN41DC1</name>
@@ -819,8 +819,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -844,8 +844,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -869,8 +869,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -971,8 +971,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -996,8 +996,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1021,8 +1021,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1048,8 +1048,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1073,8 +1073,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1098,8 +1098,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1125,8 +1125,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1150,8 +1150,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1175,8 +1175,8 @@
 			<session>Default Settings</session>
 			<description>
 			</description>
-			<login>sefiey.rad</login>
-			<password>toto</password>
+			<login>tlietar.rad</login>
+			<password>totoasticot</password>
 			<connectiontimeout>1500</connectiontimeout>
 			<logintimeout>1000</logintimeout>
 			<passwordtimeout>1000</passwordtimeout>
@@ -1909,7 +1909,7 @@
 	</connection>
 	</container>
 	</container>
-	<container type="folder" name="NFS" expanded="True">	
+	<container type="folder" name="NFS" expanded="False">	
 	<container type="folder" name="DC41" expanded="True">	
 		<connection type="PuTTY" name="10.2.21.17 - CDNFS41G10A">
 			<name>10.2.21.17 - CDNFS41G10A</name>
@@ -2962,7 +2962,7 @@ chaprob state</description>
 	</connection>
 	</container>
 	</container>
-	<container type="folder" name="Server" expanded="True">	
+	<container type="folder" name="Server" expanded="False">	
 	<container type="folder" name="Radius-Rancid" expanded="True">	
 		<connection type="PuTTY" name="FreeRadius-a (VL067805)">
 			<name>FreeRadius-a (VL067805)</name>

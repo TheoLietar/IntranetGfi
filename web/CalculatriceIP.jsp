@@ -184,6 +184,33 @@
 
     }
 
+    li.dropdown-content{
+        display: inline-block;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: fixed;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+
+    #srx:hover .dropdown-content {
+        display: block;
+    }
+
 </style>
 <body>
 <%
@@ -216,6 +243,13 @@
                     </li>
                     <li id="putty" class="menu-item menu-item-has-children">
                         <a href="Putty.jsp" class="hvr-float">Putty</a>
+                    </li>
+                    <li id="srx" class="menu-item menu-item-has-children">
+                        <a href="javascript:void(0)" class="hvr-float">Réseaux</a>
+                        <div class="dropdown-content">
+                            <a href="Fibres.jsp">Fibres Noires</a>
+                            <a href="LibreNMS.jsp">Supervision</a>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -374,7 +408,7 @@
             let bcBlockBinary = "";
 
             for (let i = 1; i <= 8; i++) {
-                if (maskBinaryBlock.substr(i - 1, 1) == "1") {
+                if (maskBinaryBlock.substr(i - 1, 1) === "1") {
                     netBlockBinary += importantBlockBinary.substr(i - 1, 1);
                     bcBlockBinary += importantBlockBinary.substr(i - 1, 1);
                 } else {
@@ -410,7 +444,7 @@
                     // rangeB += parseInt(ipBin[i], 2);
 
 
-                } else if (importantBlock == i) {
+                } else if (importantBlock === i) {
 //the important block.
                     mask1 += maskBlock;
                     maskInv += maskBlockInv;
@@ -460,7 +494,6 @@
 
             }
 
-
 //write the results to the page.
             document.getElementById('resMask').innerHTML = mask1;
             document.getElementById('resNet').innerHTML = net;
@@ -481,7 +514,7 @@
 %>
 
 <script type="text/javascript">
-    var session_obj = '<%=session_val%>';
+    let session_obj = '<%=session_val%>';
 
     if (session_obj !== 'admin') {
         document.querySelector('#adminbtn').style.display = 'none';
@@ -494,6 +527,9 @@
     }
 </script>
 <script>
+    /**
+     * Met à 0 tous mes champs
+     */
     function resetFields() {
         document.getElementById('q1').value = "";
         document.getElementById('q2').value = "";

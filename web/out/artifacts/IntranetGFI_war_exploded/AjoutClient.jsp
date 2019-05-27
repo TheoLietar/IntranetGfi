@@ -179,14 +179,6 @@
         height: 35px;
     }
 
-    .formulaire .bouton{
-        background-image: url("search.png");
-        background-repeat: no-repeat;
-        width: 35px;
-        height: 30px;
-        padding: 0;
-        box-shadow: none!important;
-    }
 
     .hot-container p {
         margin-top: 10px;
@@ -263,6 +255,9 @@
 
 <body>
 <%
+    /**
+     * Vérification user connecté
+     */
     session = request.getSession(true);
 
     if(session.getAttribute("login") == null){
@@ -286,12 +281,6 @@
                 </p>
             </div>
 
-            <%--        <div id="searchbar">--%>
-            <%--            <form action="" class="formulaire">--%>
-            <%--                <input class="champ" type="text" placeholder="Search..."/>--%>
-            <%--                <input class="bouton" type="submit" value=" "/>--%>
-            <%--            </form>--%>
-            <%--        </div>--%>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">

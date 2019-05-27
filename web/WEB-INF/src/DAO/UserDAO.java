@@ -7,8 +7,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * DAO afin de gérer un utilisateur
+ */
 public class UserDAO {
 
+    /**
+     * Crée un client dans la base de données
+     * @param user
+     */
     public static void create(Utilisateur user){
         try(Connection con = new DS().getConnection()){
             String query = "INSERT INTO utilisateur (login,password,name,prenom) VALUES (?,?,?,?)";
@@ -24,6 +31,11 @@ public class UserDAO {
     }
 
 
+    /**
+     * Cherche un client avec son login
+     * @param login
+     * @return l'utilisateur trouvé ou null si il n'existe pas
+     */
     public static Utilisateur findByLogin(String login){
         try(Connection con = new DS().getConnection()){
             String query = "SELECT * FROM utilisateur WHERE login = ?";
@@ -40,6 +52,11 @@ public class UserDAO {
         return null;
     }
 
+    /**
+     * Modifie les informations d'un client
+     * @param login
+     * @param user
+     */
     public static void update(String login,Utilisateur user){
         try(Connection con = new DS().getConnection()){
             String query = "UPDATE utilisateur SET login = ?, password = ?, name = ?, prenom = ? WHERE login = ?";
@@ -55,6 +72,11 @@ public class UserDAO {
         }
     }
 
+
+    /**
+     * Supprime un utilisateur de la base à l'aide de son login
+     * @param login
+     */
     public static void delete(String login){
         try(Connection con = new DS().getConnection()){
             String query = "DELETE FROM utilisateur WHERE login = ?";

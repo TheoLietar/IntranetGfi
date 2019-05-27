@@ -7,8 +7,15 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * DAO afin de manipuler un client
+ */
 public class ClientDAO {
 
+    /**
+     * Crée un client dans la base de données
+     * @param client
+     */
     public static void create(Client client){
         try(Connection con = new DS().getConnection()){
             String query = "INSERT INTO client (nom,confluence,ticketting,sla,contact,plage,img) VALUES (?,?,?,?,?,?,?)";
@@ -26,6 +33,11 @@ public class ClientDAO {
         }
     }
 
+    /**
+     * Cherche un client avec son nom
+     * @param nom
+     * @return le client trouvé ou null si le client n'existe pas
+     */
     public static Client findByName(String nom){
         try(Connection con = new DS().getConnection()){
             String query = "SELECT * FROM client WHERE nom = ?";

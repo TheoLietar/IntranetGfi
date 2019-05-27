@@ -11,6 +11,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/ControlerAuthent")
+/**
+ * Controller pour l'authentification
+ */
 public class ControllerAuthent extends HttpServlet {
 
     @Override

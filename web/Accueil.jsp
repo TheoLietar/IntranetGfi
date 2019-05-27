@@ -419,10 +419,39 @@
         left: 0;
     }
 
+    li.dropdown-content{
+        display: inline-block;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: fixed;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a{
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+
+    #srx:hover .dropdown-content {
+        display: block;
+    }
 </style>
 
 <body id="body">
 <%
+    /**
+     * Vérification si l'utilisateur est bien connecté
+     */
     session = request.getSession(true);
     System.out.println(session.getAttribute("login"));
     if(session.getAttribute("login") == null){
@@ -452,6 +481,13 @@
                     </li>
                     <li id="putty" class="menu-item menu-item-has-children">
                         <a href="Putty.jsp" class="hvr-float">Putty</a>
+                    </li>
+                    <li id="srx" class="menu-item menu-item-has-children">
+                        <a href="javascript:void(0)" class="hvr-float">Réseaux</a>
+                        <div class="dropdown-content">
+                            <a href="Fibres.jsp">Fibres Noires</a>
+                            <a href="LibreNMS.jsp">Supervision</a>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -583,7 +619,7 @@
 %>
 
 <script type="text/javascript">
-    var session_obj = '<%=session_val%>';
+    let session_obj = '<%=session_val%>';
 
     if (session_obj !== 'admin') {
         document.querySelector('#adminbtn').style.display = 'none';
